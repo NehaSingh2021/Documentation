@@ -4,13 +4,13 @@
 2. [Table of Contents](#table-of-contents)
 3. [Input](#input)
     - [Radiometric Orthomosaic](#radiometric-orthomosaic)
-[3.2 Inferno Orthomosaic](#inferno-orthomosaic)
-[3.3 RGB Orthomosaic](#rgb-orthomosaic)
-3.4 Panel orientation
-3.5 No of columns in a table
-3.6 No of rows in a table
-4 Preprocessing
-4.1 Normalization of radiometric orthomosaic 
+    - [Inferno Orthomosaic](#inferno-orthomosaic)
+    - [RGB Orthomosaic](#rgb-orthomosaic)
+    - [Panel orientation](#panel-orientation)
+    - [No of columns in a table](#no-of-columns-in-a-table)
+    - [No of rows in a table](#no-of-rows-in-a-table)
+4. [Preprocessing](#preprocessing)
+    - [Normalization of radiometric orthomosaic](#normalization-of-radiometric-orthomosaic)
 4.2 Rotation 
 4.3 Slicing
 4.4 Annotation (required for training and QA)
