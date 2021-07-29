@@ -1,9 +1,9 @@
 # Overview
 # Table of Contents
-[1 Overview](#overview)
-[2 Table of Contents](#table-of-contents)
-[3 Input](#input)
-[3.1 Radiometric Orthomosaic](#radiometric-orthomosaic)
+1. [Overview](#overview)
+2. [Table of Contents](#table-of-contents)
+3. [Input](#input)
+-3.1 [Radiometric Orthomosaic](#radiometric-orthomosaic)
 [3.2 Inferno Orthomosaic](#inferno-orthomosaic)
 [3.3 RGB Orthomosaic](#rgb-orthomosaic)
 3.4 Panel orientation
