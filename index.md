@@ -13,11 +13,9 @@
     - [Normalization of radiometric orthomosaic](#normalization-of-radiometric-orthomosaic)
     - [Rotation](#rotation)
     - [Slicing](#slicing)
-    - [Annotation (required for training and QA)](#annotation-required-for-training-and-qa)
-     
-       i [Defect Annotation](#defect-annotation)
-       
-       ii [Table Annotation](#table-annotation) 
+    - [Annotation (required for training and QA)](#annotation-required-for-training-and-qa)<br/>
+       i [Defect Annotation](#defect-annotation)<br/>
+       ii [Table Annotation](#table-annotation)
     - [Image enhancement](#image-enhancement)
     - [Augmentation](#augmentation)
 5. [Model Training](#model-training)
