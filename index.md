@@ -15,8 +15,8 @@
     - [Slicing](#slicing)
     - [Annotation](#annotation)
      
-       1 [Defect Annotation](#defect-annotation)
-       2 [Table Annotation](#table-annotation) 
+       i [Defect Annotation](#defect-annotation)
+       ii [Table Annotation](#table-annotation) 
     - [Image enhancement](#image-enhancement)
     - [Augmentation](#augmentation)
 5. [Model Training](#model-training)
