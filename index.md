@@ -107,19 +107,19 @@ The GitHub link to the source code: <a href="https://github.com/baggageai/dml-pr
 All the defects are annotated through an annotation tool CVAT. It is an OpenCV project to provide easy labeling for computer vision datasets. CVAT allows to utilize an easy to use interface to make annotations efficiently. This tool generates an xml file for each image. As shown in Fig 1.9 each type of defect is annotated with table annotation.<br/>
 The GitHub link to the source code: <a href="https://github.com/baggageai/dml-prescinto-solar-ai/blob/main/solarai/pre_processor/create_bbox_rotate_xml.py" target="_blank"> Annotation GitHub file </a>
 
-<img src="https://user-images.githubusercontent.com/75617171/127717872-e9125712-1ee2-4e8d-9318-b7d565335c7d.png" width="600" height="600"><br/>
+<img src="https://user-images.githubusercontent.com/75617171/127717872-e9125712-1ee2-4e8d-9318-b7d565335c7d.png" width="800" height="400"><br/>
 > Fig 1.9 Each defect is annotated with table annotation
 
 ## Defect Annotation 
 Defect annotation is making rectangular boundary around the defected panel. Fig 1.10 is a sliced inferno image which shows different types of defect annotated. Annotation creates an XML file with the Xmin, Ymin, Xmax, Ymax value of the solar panel and the defect type.
 
-<img src="https://user-images.githubusercontent.com/75617171/127718003-73d03f62-1e4f-4238-a9b0-a5870710268c.png" width="600" height="600"><br/>
+<img src="https://user-images.githubusercontent.com/75617171/127718003-73d03f62-1e4f-4238-a9b0-a5870710268c.png" width="800" height="400"><br/>
 > Fig 1.10 Annotation on Defect using CVAT
 
 ## Table Annotation 
 The tables in every sliced image is annotated. In annotation rectangular shape boundary is made around the tables. Fig 1.11 shows the Annotation of table.
 
-<img src="https://user-images.githubusercontent.com/75617171/127718005-c1743f06-9387-4d3c-a384-fd0bfdb63d8c.png" width="600" height="600"><br/>
+<img src="https://user-images.githubusercontent.com/75617171/127718005-c1743f06-9387-4d3c-a384-fd0bfdb63d8c.png" width="800" height="400"><br/>
 > Fig 1.11 Annotation on Defect using CVAT
 
 There are 7 type of defects in solar panels. These defects are annotated and used to train the model about defects. 
@@ -128,43 +128,43 @@ The types of defects are:
 #### BYPASS DIODE ACTIVE: 
 Part of the module surface is homogeneously heated up and heat dissipation by the bypass diode, which is operating, is visible. Temperature difference of the glass on top of the junction box containing the operating bypass diode differs with construction (or failure of a bypass diode). Loss of contact at a cell connection might lead to a serial arc visible.
 
-<!-- <img src="" width="400" height="200"><br/> -->
+<img src="https://user-images.githubusercontent.com/75617171/127718492-63627240-e47f-4593-baf9-4e53c01b8a4a.png" width="400" height="200"><br/>
 > Fig 1.12 Bypass Diode Active defect image
 
 #### MODULE SHORT CIRCUIT: 
 At one or more substrings, easily mistaken for cell breakage or cell defects, Potential induced degradation (PID) or mismatch (or failure of a bypass diode).
 
-<!-- <img src="" width="400" height="200"><br/> -->
+<img src="https://user-images.githubusercontent.com/75617171/127718476-2281271c-f569-4907-98d4-96790fdddfea.png" width="400" height="200"><br/>
 > Fig 1.13 Module Short Circuit defect image
 
 #### MODULE HOT: 
 The module surface is homogeneously heated than other panels.
 
-<!-- <img src="" width="400" height="200"><br/> -->
+<img src="https://user-images.githubusercontent.com/75617171/127718473-10bb899d-d7d6-455b-8cdd-ad31844c5a94.png" width="400" height="200"><br/>
 > Fig 1.14 Module Hot defect image
 
 #### STRING HOT: 
 The module surface is homogeneously heated. Temperature difference of the junction box is similar to operational state.
 
-<!-- <img src="" width="400" height="200"><br/> -->
+<img src="https://user-images.githubusercontent.com/75617171/127718471-4efc5f74-30e5-4d66-80fb-03b5dd04b27f.png" width="400" height="200"><br/>
 > Fig 1.15 String Hot defect image
 
 #### HOTSPOT (Cell Failure, Cell Chipping and Delamination): 
 Difference in temperature increases with load, cell efficiency and number of cells in a substring.
 
-<!-- <img src="" width="400" height="200"><br/> -->
+<img src="https://user-images.githubusercontent.com/75617171/127718468-a84bd6a6-10af-4b9b-adcd-3d23875e3b1e.png" width="400" height="200"><br/>
 > Fig 1.16 Hotspot defect image
 
 #### DIRT/SHADOW: 
 Assessable by thermal pattern, visual Image and classified typically as an extended area abnormality. Compared with RGB Tiff.
 
-<!-- <img src="" width="400" height="200"><br/> -->
+<img src="https://user-images.githubusercontent.com/75617171/127718467-d5b9dabc-536d-46c5-863a-84bd7d6178e9.png" width="400" height="200"><br/>
 > Fig 1.17 Dirt/Shadow defect image
 
 #### VEGETATION : 
 The nearby area plants may grow tall and they may lay on top of panels.  It covers the solar panels which usually occurs at the edge of the panel, and is sometimes seen as a tiny bright dot or shadowed.
 
-<!-- <img src="" width="400" height="200"><br/> -->
+<img src="https://user-images.githubusercontent.com/75617171/127718466-6a3c43c9-3011-4ef3-b4d8-c0ec6802f560.png" width="400" height="200"><br/>
 >Fig 1.18 Vegetation defect image
 
 ## Image enhancement 
@@ -182,7 +182,7 @@ CLAHE is a variant of Adaptive histogram equalization (AHE) which takes care of 
 In Unsharp masking technique an image is sharpened by subtracting a blurred (Unsharp) version of the image from itself. An Unsharp filter is an operator used to sharpen an image.
 Sharpening can help you emphasize texture and detail, and is critical when post-processing most digital images. It detects edges and create a mask by subtracting the blurred image copy from it’s original image and then uses the mask to increase contrast at the edges by adding higher contrast copy, Unsharp mask and original image which results into sharpened final image.
 
-<!-- <img src="" width="400" height="200"><br/> -->
+<img src="https://user-images.githubusercontent.com/75617171/127718673-cd92ba14-999e-434c-a70c-986f058c0fba.png" width="400" height="200"><br/>
 > Fig 1.19 Image processing done using CLAHE, Unsharp Masking technique.
 
 ## Augmentation
