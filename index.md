@@ -62,7 +62,7 @@ As shown below in Fig 1.4 (a) Is a Portrait Panel with rotation and without rota
 <img src="https://user-images.githubusercontent.com/75617171/127713133-1e8f28a8-97a1-4f0c-a37b-7ac51685b640.png" width="600" height="200"><br/>
 > Fig 1.4 (a) Portrait Panel with rotation and without rotation
 
-<img src="https://user-images.githubusercontent.com/75617171/127713549-62c917a0-5993-4f2e-a116-7dd533b5bf18.jpg" width="500" height="200"><br/>
+<img src="https://user-images.githubusercontent.com/75617171/127713549-62c917a0-5993-4f2e-a116-7dd533b5bf18.jpg" width="600" height="200"><br/>
 > Fig 1.4 (b) Landscape Panel with rotation and without rotation
 
 ## No of columns in a table
@@ -80,7 +80,7 @@ Number of rows of a single table is to be provided. As shown in Fig 1.5 No of ro
 Scaling the radiometric image in grey color with the minimum and maximum values as the temperature difference in the solar plant. If in a plant if a temperature is of 30-50 degree then the entire image will be scaled for 20 degree of temperature difference. 30 degree will be considered as 0 pixel values and 50 degree will be considered as 255 pixel values.
 Normalization allows better correspondence between temperature values irrespective of location. (Higher temp locations may have temperatures from 35-45 degrees, lower temp locations may vary from 20-30 degrees) so by this process the data is preprocessed to be independent and identically distributed. The data contains many outliers, which tend to diminish the quality of the grayscale, so the outliers are clipped. For normalization of radiometric orthomosaic the input required is the Radiometric geotiff image path.
 Assumptions: Minimum temperature of any plant is considered to be above -50 degrees Celsius.
-<!-- The GitHub link to source code : GitHub Rotate_orthomosaic.py file <a href="" target="_blank"></a> -->
+*The GitHub link to source code :*<a href="" target="_blank"> GitHub Normalization.py file </a>???????????????????
 
 <img src="https://user-images.githubusercontent.com/75617171/127715587-176c22d2-b67a-4074-9bfa-2b560b7ca631.png" width="300" height="300"><br/>
 > Fig 1.6 Normalized sliced greyscale Radiometric Image
@@ -88,20 +88,20 @@ Assumptions: Minimum temperature of any plant is considered to be above -50 degr
 ## Rotation 
 The orthomosaics (Inferno and Radiometric) images are rotated so that the panels are either Portrait or Landscape as shown in Fig 1.7. This is done by finding the angle of rotation. This is a mandatory requirement as the annotation boxes are always horizontal rectangles of the entire panel/table.
 
-<img src="https://user-images.githubusercontent.com/75617171/127716262-8042368c-73cc-4342-9398-b5967f42d154.png" width="300" height="300"><br/>
+<img src="https://user-images.githubusercontent.com/75617171/127716262-8042368c-73cc-4342-9398-b5967f42d154.png" width="600" height="200"><br/>
 > Fig 1.7 Above is a original inferno image, below is a rotated inferno image
 
 It searches an image file with extensions (jpg, png, jpeg, PNG, bmp, BMP, tif, Tif) so, all the images should be in the given format. 
-<!-- The GitHub link to source code : GitHub Rotate_orthomosaic.py file <a href="" target="_blank"></a> -->
+*The GitHub link to source code :*<a href="https://github.com/baggageai/dml-prescinto-solar-ai/blob/main/solarai/pre_processor/rotate_orthomosaic.py" target="_blank"> GitHub Rotate_orthomosaic.py file </a>
 
 ## Slicing
 The orthomosaic (Inferno and normalized Radiometric) images are very big in dimensions, such size cannot be directly consumed by any object detection algorithm. So, images are sliced into small size (as shown in Fig 1.8) so that image can be consumed by the algorithm. Each slice typically covers 3-4 tables.
 
-<!-- <img src="" width="400" height="200"><br/> -->
+<img src="https://user-images.githubusercontent.com/75617171/127717325-05eee3d2-c167-4508-9e26-06c398f307d7.png" width="600" height="200"><br/>
 > Fig 1.8 Both are orthomosaic images sliced with each image covering 3-4 tables
 
 The slicing requires input_dir, output_dir, panel_orientation, tables, tables_per_slice, no_of_panels_in_table_from_plant as inputs and returns sliced images in a created directory.
-<!-- The GitHub link to the source code: GitHub Slice_orthomosaic.py file <a href="" target="_blank"></a> -->
+*The GitHub link to the source code:*<a href="https://github.com/baggageai/dml-prescinto-solar-ai/blob/main/solarai/pre_processor/slice_orthomosaic.py" target="_blank">GitHub Slice_orthomosaic.py file </a>
 
 ## Annotation (required for training and QA)
 All the defects are annotated through an annotation tool CVAT. It is an OpenCV project to provide easy labeling for computer vision datasets. CVAT allows to utilize an easy to use interface to make annotations efficiently. This tool generates an xml file for each image. As shown in Fig 1.9 each type of defect is annotated with table annotation.
@@ -198,7 +198,7 @@ Model is trained for tables and each defect separately. After annotations all th
 >Fig 1.21 Model Training Flow Chart
 
 ## Training the model for detection of defects
-For each defect the model was trained separately. The dataset annotated in previous steps is split into train and test data such that 80% data is used for training and with 20% data testing is done where, an entire orthomosaic file is used for training and entire another orthomosaic file is used for testing. If 5 orthomosaic files are shared then 3 of them are used for training and 2 for testing. Darknet<a href="" target="_blank"></a> is used for training and testing which is a framework for object detection classifier. Then anchor boxes for each of the defect is calculated. Refer the GitHub link <a href="" target="_blank"></a> to calculate anchor box which is instructed in readme file to calculate anchors:
+For each defect the model was trained separately. The dataset annotated in previous steps is split into train and test data such that 80% data is used for training and with 20% data testing is done where, an entire orthomosaic file is used for training and entire another orthomosaic file is used for testing. If 5 orthomosaic files are shared then 3 of them are used for training and 2 for testing. Darknet<a href="" target="_blank"></a> is used for training and testing which is a framework for object detection classifier. Then anchor boxes for each of the defect is calculated. Refer the GitHub link <a href="" target="_blank"></a> to calculate anchor box which is instructed in readme file to calculate anchors:<br/>
 ```darknet.exe detector calc_anchors data/obj.data -num_of_clusters 12 -width 640 -height 640 ```
 After calculating anchor boxes image processing techniques mention in the preprocessing (Augmentation) are applied. The model is then trained to obtain mish YOLOv4 P4 (640 X 640).
 
