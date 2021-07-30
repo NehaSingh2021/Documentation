@@ -30,7 +30,8 @@
     - [Creating SO files](#creating-so-files)
     - [Input Path](#input-path)
     - [API’s](#apis)
-6.3.1 POST/api/v1/defect_detection 
+    
+       i [POST/api/v1/defect_detection](#postapiv1defectdetection)
 6.3.2 GET/api/v1/get_result
 6.3.3 POST/api/v1/defect_correction (Remaining)
 6.3.4 POST/api/v1/table_detection 
