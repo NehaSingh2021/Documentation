@@ -222,12 +222,12 @@ The GitHub link to the source code: (file link)
 # Deployment of the model 
 For first time activity the deployment process given in Fig 1.22 is followed for each plant.
 
-<img src="https://user-images.githubusercontent.com/75617171/127719173-042a9d79-4bd6-48a2-824a-332ad4bd195f.png" width="400" height="200"><br/>
+<img src="https://user-images.githubusercontent.com/75617171/127719173-042a9d79-4bd6-48a2-824a-332ad4bd195f.png" width="800" height="200"><br/>
 > Fig 1.22 First time activity for each plant
 
 Deployment process for defect detection for each plant is given in Fig 1.23.
 
-<img src="https://user-images.githubusercontent.com/75617171/127719177-50af8798-5747-402d-9d47-895b48762aec.png" width="400" height="200"><br/>
+<img src="https://user-images.githubusercontent.com/75617171/127719177-50af8798-5747-402d-9d47-895b48762aec.png" width="800" height="200"><br/>
 >Fig 1.23 Defect identification for each plant
 
 Deployment process for defect detection for each plant is given in Fig 1.23.
