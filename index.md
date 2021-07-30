@@ -31,10 +31,10 @@
     - [Input Path](#input-path)
     - [API’s](#apis)
     
-       i [POST/api/v1/defect_detection](#postapiv1defect-detection)
-       ii [GET/api/v1/get_result](#get/api/v1/get_result)
-       iii [POST/api/v1/defect_correction (Remaining)](#post-api-v1-defect_correctionremaining)
-       iv [POST/api/v1/table_detection](#post/api/v1/table-detection)
+       i [Defect Detection](#defect-detection)
+       ii [Get Result](#get-result)
+       iii [Defect Correction (Remaining)](#defect-correctionremaining)
+       iv [Table Detection](#table-detection)
 
 
 
@@ -224,7 +224,7 @@ The input files or images can be saved in a directory created here or there and 
 An API (Application Programming Interface) is a set of functions that allows applications to access data and interact with external software components, operating systems, or microservices. An API delivers a user response to a system and sends the system's response back to a user.
 The four API’s are : 
 
-#### POST/api/v1/defect_detection 
+#### Defect Detection 
 This API is used to detect the defects from Orthomosaic images.
 After the main call is directed by the solarai app to api services app, the URL “v1/defect_detection“ calls the function views.detection , which requests for parameters.
 where parameters required are:
@@ -243,7 +243,7 @@ The JSON response received after sending the POST request contains:
                       1. True: The upload in database was successful.
                       2. False: The upload in database was not successful.
 
-#### GET/api/v1/get_result
+#### Get Result
 This API gives the status of the image detection.
 After the main call is directed by the solarai app to api services app, the URL “v1/get_result“ calls the function views.get_result , which requests for parameters. 
 where “id” received when image was sent through POST/api/v1/defect_detection is required as a parameter for this API call. 
@@ -256,12 +256,12 @@ The JSON response will be of 3 types:
                                 3. Failure: If the status of task is failed or none of the above it sends a JSON response 
                                                   of job status as “FAILURE”.
 
-#### POST/api/v1/defect_correction (Remaining)
+#### Defect Correction (Remaining)
 This API will give the output with Orthomosaic ID or Orthomosaic Name, Table ID, Defects Details and Lat-Long Coordinates.
 After the main call is directed by the solarai app to api services app, the URL “v1/defect_correction“ calls the function views.defect_correction , which requests for parameters. 
 It requires file location of corrected XML files in file_location and the output path is set in which the response will be received.
 
-#### POST/api/v1/table_detection 
+#### Table Detection 
 This API is used for Table Detection.
 After the main call is directed by the solarai app to api services app, the URL “v1/defect_detection“ calls the function views.detection , which requests for parameters.
 where parameters required are:
