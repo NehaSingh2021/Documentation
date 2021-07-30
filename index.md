@@ -46,20 +46,22 @@
 ## Radiometric Orthomosaic
 Radiometric orthomosaic image is made by stitching raw thermal images captured by flying drone over solar plant. It contains temperature data. As shown below in Fig 1.1 it is a sliced normalized grey scale radiometric image. The name of this input image should be in the instructed format inside the directory that is “plantname_mission_radiometric.tif”.
 
-<img src="https://user-images.githubusercontent.com/75617171/127639002-306c5ce7-73e4-4520-85f6-d2f2fa9e969b.png" width="100" height="100">
+<img src="https://user-images.githubusercontent.com/75617171/127639002-306c5ce7-73e4-4520-85f6-d2f2fa9e969b.png" width="200" height="200">
 
 Fig 1.1 Normalized sliced grey scale Radiometric Image
 
 ## Inferno Orthomosaic
 Inferno orthomosaic image is created by radiometric image by pouring Inferno color scheme in it as shown in Fig 1.2. The name of this input image should be in the instructed format inside the directory that is “plantname_mission_inferno.tif”.
 
-![2117566491](https://user-images.githubusercontent.com/75617171/127693062-76afd971-7d54-4d47-950c-ccc6efed7446.png)
+<img src="https://user-images.githubusercontent.com/75617171/127693062-76afd971-7d54-4d47-950c-ccc6efed7446.png" width="200" height="200">
 
 Fig 1.2 Inferno orthomosaic image
 
 ## RGB Orthomosaic
-RGB orthomosaic image is a normal image which contains three channels of color red, blue and green made by stitching raw images captured by flying drone over solar plant as shown in Fig 1.3. The name of this input image should be in the instructed format inside the directory that is “plantname_mission_rgb.tif”.<br/>
-<img src="https://user-images.githubusercontent.com/75617171/127639002-306c5ce7-73e4-4520-85f6-d2f2fa9e969b.png" width="100" height="100"><br/>
+RGB orthomosaic image is a normal image which contains three channels of color red, blue and green made by stitching raw images captured by flying drone over solar plant as shown in Fig 1.3. The name of this input image should be in the instructed format inside the directory that is “plantname_mission_rgb.tif”.
+
+<img src="https://user-images.githubusercontent.com/75617171/127713046-cc48e1b3-e7a9-4ff2-98a8-b662ced9ecb6.png" width="200" height="200">
+
 Fig 1.3 RGB orthomosaic image
 
 ## Panel orientation
