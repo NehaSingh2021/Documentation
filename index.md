@@ -13,8 +13,8 @@
     - [Normalization of radiometric orthomosaic](#normalization-of-radiometric-orthomosaic)
     - [Rotation](#rotation)
     - [Slicing](#slicing)
-    - [Annotation (required for training and QA)](#annotation-(required-for-training-and-QA))
-4.4.1 Defect Annotation 
+    - [Annotation](#annotation)
+     - [Defect Annotation](#Defect Annotation)
 4.4.2 Table Annotation 
 4.5 Image enhancement 
 4.6 Augmentation
@@ -93,7 +93,7 @@ Fig 1.8 Both are orthomosaic images sliced with each image covering 3-4 tables
 The slicing requires input_dir, output_dir, panel_orientation, tables, tables_per_slice, no_of_panels_in_table_from_plant as inputs and returns sliced images in a created directory.
 The GitHub link to the source code: GitHub Slice_orthomosaic.py file
 
-## Annotation (required for training and QA)
+## Annotation
 All the defects are annotated through an annotation tool CVAT. It is an OpenCV project to provide easy labeling for computer vision datasets. CVAT allows to utilize an easy to use interface to make annotations efficiently. This tool generates an xml file for each image. As shown in Fig 1.9 each type of defect is annotated with table annotation.
 The GitHub link to the source code: Annotation GitHub file
 
