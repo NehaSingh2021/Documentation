@@ -134,37 +134,37 @@ Part of the module surface is homogeneously heated up and heat dissipation by th
 #### MODULE SHORT CIRCUIT: 
 At one or more substrings, easily mistaken for cell breakage or cell defects, Potential induced degradation (PID) or mismatch (or failure of a bypass diode).
 
-<img src="https://user-images.githubusercontent.com/75617171/127718476-2281271c-f569-4907-98d4-96790fdddfea.png" width="200" height="50"><br/>
+<img src="https://user-images.githubusercontent.com/75617171/127718476-2281271c-f569-4907-98d4-96790fdddfea.png" width="200" height="100"><br/>
 > Fig 1.13 Module Short Circuit defect image
 
 #### MODULE HOT: 
 The module surface is homogeneously heated than other panels.
 
-<img src="https://user-images.githubusercontent.com/75617171/127718473-10bb899d-d7d6-455b-8cdd-ad31844c5a94.png" width="200" height="200"><br/>
+<img src="https://user-images.githubusercontent.com/75617171/127718473-10bb899d-d7d6-455b-8cdd-ad31844c5a94.png" width="200" height="100"><br/>
 > Fig 1.14 Module Hot defect image
 
 #### STRING HOT: 
 The module surface is homogeneously heated. Temperature difference of the junction box is similar to operational state.
 
-<img src="https://user-images.githubusercontent.com/75617171/127718471-4efc5f74-30e5-4d66-80fb-03b5dd04b27f.png" width="200" height="200"><br/>
+<img src="https://user-images.githubusercontent.com/75617171/127718471-4efc5f74-30e5-4d66-80fb-03b5dd04b27f.png" width="200" height="100"><br/>
 > Fig 1.15 String Hot defect image
 
 #### HOTSPOT (Cell Failure, Cell Chipping and Delamination): 
 Difference in temperature increases with load, cell efficiency and number of cells in a substring.
 
-<img src="https://user-images.githubusercontent.com/75617171/127718468-a84bd6a6-10af-4b9b-adcd-3d23875e3b1e.png" width="200" height="200"><br/>
+<img src="https://user-images.githubusercontent.com/75617171/127718468-a84bd6a6-10af-4b9b-adcd-3d23875e3b1e.png" width="200" height="100"><br/>
 > Fig 1.16 Hotspot defect image
 
 #### DIRT/SHADOW: 
 Assessable by thermal pattern, visual Image and classified typically as an extended area abnormality. Compared with RGB Tiff.
 
-<img src="https://user-images.githubusercontent.com/75617171/127718467-d5b9dabc-536d-46c5-863a-84bd7d6178e9.png" width="200" height="200"><br/>
+<img src="https://user-images.githubusercontent.com/75617171/127718467-d5b9dabc-536d-46c5-863a-84bd7d6178e9.png" width="200" height="100"><br/>
 > Fig 1.17 Dirt/Shadow defect image
 
 #### VEGETATION : 
 The nearby area plants may grow tall and they may lay on top of panels.  It covers the solar panels which usually occurs at the edge of the panel, and is sometimes seen as a tiny bright dot or shadowed.
 
-<img src="https://user-images.githubusercontent.com/75617171/127718466-6a3c43c9-3011-4ef3-b4d8-c0ec6802f560.png" width="200" height="200"><br/>
+<img src="https://user-images.githubusercontent.com/75617171/127718466-6a3c43c9-3011-4ef3-b4d8-c0ec6802f560.png" width="200" height="100"><br/>
 >Fig 1.18 Vegetation defect image
 
 ## Image enhancement 
