@@ -11,9 +11,9 @@
     - [No of rows in a table](#no-of-rows-in-a-table)
 4. [Preprocessing](#preprocessing)
     - [Normalization of radiometric orthomosaic](#normalization-of-radiometric-orthomosaic)
-4.2 Rotation 
-4.3 Slicing
-4.4 Annotation (required for training and QA)
+    - [Rotation](#rotation)
+    - [Slicing](#slicing)
+    - [Annotation (required for training and QA)](#Annotation-(required-for-training-and-QA))
 4.4.1 Defect Annotation 
 4.4.2 Table Annotation 
 4.5 Image enhancement 
