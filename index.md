@@ -227,7 +227,7 @@ For first time activity the deployment process given in Fig 1.22 is followed for
 
 Deployment process for defect detection for each plant is given in Fig 1.23.
 
-<img src="https://user-images.githubusercontent.com/75617171/127719177-50af8798-5747-402d-9d47-895b48762aec.png" width="800" height="200"><br/>
+<img src="https://user-images.githubusercontent.com/75617171/127719177-50af8798-5747-402d-9d47-895b48762aec.png" width="800" height="300"><br/>
 >Fig 1.23 Defect identification for each plant
 
 Deployment process for defect detection for each plant is given in Fig 1.23.
