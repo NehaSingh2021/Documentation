@@ -14,9 +14,9 @@
     - [Rotation](#rotation)
     - [Slicing](#slicing)
     - [Annotation](#annotation)
-          - [Defect Annotation](#Defect Annotation)
-4.4.2 Table Annotation 
-4.5 Image enhancement 
+     - [Defect Annotation](#defect-annotation)
+     - [Table Annotation](#table-annotation) 
+    - [Image enhancement](#image-enhancement)
 4.6 Augmentation
 5 Model Training 
 5.1 Training the model for detection of defects
