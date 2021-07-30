@@ -15,7 +15,7 @@
     c. [Slicing](#slicing)<br/>
     d. [Annotation (required for training and QA)](#annotation-required-for-training-and-qa)<br/>
        i [Defect Annotation](#defect-annotation)<br/>
-       ii [Table Annotation](#table-annotation)<br/>
+       ii [Table Annotation](#table-annotation)
     e. [Image enhancement](#image-enhancement)<br/>
     f. [Augmentation](#augmentation)
 5. [Model Training](#model-training)<br/>
