@@ -53,6 +53,8 @@ Fig 1.1 Normalized sliced grey scale Radiometric Image
 ## Inferno Orthomosaic
 Inferno orthomosaic image is created by radiometric image by pouring Inferno color scheme in it as shown in Fig 1.2. The name of this input image should be in the instructed format inside the directory that is “plantname_mission_inferno.tif”.
 
+![2117566491](https://user-images.githubusercontent.com/75617171/127693062-76afd971-7d54-4d47-950c-ccc6efed7446.png)
+
 Fig 1.2 Inferno orthomosaic image
 
 ## RGB Orthomosaic
