@@ -79,8 +79,8 @@ Number of rows of a single table is to be provided. As shown in Fig 1.5 No of ro
 ## Normalization of radiometric orthomosaic 
 Scaling the radiometric image in grey color with the minimum and maximum values as the temperature difference in the solar plant. If in a plant if a temperature is of 30-50 degree then the entire image will be scaled for 20 degree of temperature difference. 30 degree will be considered as 0 pixel values and 50 degree will be considered as 255 pixel values.
 Normalization allows better correspondence between temperature values irrespective of location. (Higher temp locations may have temperatures from 35-45 degrees, lower temp locations may vary from 20-30 degrees) so by this process the data is preprocessed to be independent and identically distributed. The data contains many outliers, which tend to diminish the quality of the grayscale, so the outliers are clipped. For normalization of radiometric orthomosaic the input required is the Radiometric geotiff image path.
-Assumptions: Minimum temperature of any plant is considered to be above -50 degrees Celsius.
-*The GitHub link to source code :*<a href="" target="_blank"> GitHub Normalization.py file </a>???????????????????
+Assumptions: Minimum temperature of any plant is considered to be above -50 degrees Celsius.<br/>
+*The GitHub link to source code: *<a href="" target="_blank">GitHub Normalization.py file </a>???????????????????
 
 <img src="https://user-images.githubusercontent.com/75617171/127715587-176c22d2-b67a-4074-9bfa-2b560b7ca631.png" width="300" height="300"><br/>
 > Fig 1.6 Normalized sliced greyscale Radiometric Image
@@ -88,11 +88,11 @@ Assumptions: Minimum temperature of any plant is considered to be above -50 degr
 ## Rotation 
 The orthomosaics (Inferno and Radiometric) images are rotated so that the panels are either Portrait or Landscape as shown in Fig 1.7. This is done by finding the angle of rotation. This is a mandatory requirement as the annotation boxes are always horizontal rectangles of the entire panel/table.
 
-<img src="https://user-images.githubusercontent.com/75617171/127716262-8042368c-73cc-4342-9398-b5967f42d154.png" width="600" height="200"><br/>
+<img src="https://user-images.githubusercontent.com/75617171/127716262-8042368c-73cc-4342-9398-b5967f42d154.png" width="600" height="400"><br/>
 > Fig 1.7 Above is a original inferno image, below is a rotated inferno image
 
-It searches an image file with extensions (jpg, png, jpeg, PNG, bmp, BMP, tif, Tif) so, all the images should be in the given format. 
-*The GitHub link to source code :*<a href="https://github.com/baggageai/dml-prescinto-solar-ai/blob/main/solarai/pre_processor/rotate_orthomosaic.py" target="_blank"> GitHub Rotate_orthomosaic.py file </a>
+It searches an image file with extensions (jpg, png, jpeg, PNG, bmp, BMP, tif, Tif) so, all the images should be in the given format. <br/>
+*The GitHub link to source code: *<a href="https://github.com/baggageai/dml-prescinto-solar-ai/blob/main/solarai/pre_processor/rotate_orthomosaic.py" target="_blank">GitHub Rotate_orthomosaic.py file </a>
 
 ## Slicing
 The orthomosaic (Inferno and normalized Radiometric) images are very big in dimensions, such size cannot be directly consumed by any object detection algorithm. So, images are sliced into small size (as shown in Fig 1.8) so that image can be consumed by the algorithm. Each slice typically covers 3-4 tables.
@@ -100,26 +100,26 @@ The orthomosaic (Inferno and normalized Radiometric) images are very big in dime
 <img src="https://user-images.githubusercontent.com/75617171/127717325-05eee3d2-c167-4508-9e26-06c398f307d7.png" width="600" height="200"><br/>
 > Fig 1.8 Both are orthomosaic images sliced with each image covering 3-4 tables
 
-The slicing requires input_dir, output_dir, panel_orientation, tables, tables_per_slice, no_of_panels_in_table_from_plant as inputs and returns sliced images in a created directory.
-*The GitHub link to the source code:*<a href="https://github.com/baggageai/dml-prescinto-solar-ai/blob/main/solarai/pre_processor/slice_orthomosaic.py" target="_blank">GitHub Slice_orthomosaic.py file </a>
+The slicing requires input_dir, output_dir, panel_orientation, tables, tables_per_slice, no_of_panels_in_table_from_plant as inputs and returns sliced images in a created directory.<br/>
+*The GitHub link to the source code: *<a href="https://github.com/baggageai/dml-prescinto-solar-ai/blob/main/solarai/pre_processor/slice_orthomosaic.py" target="_blank">GitHub Slice_orthomosaic.py file </a>
 
 ## Annotation (required for training and QA)
-All the defects are annotated through an annotation tool CVAT. It is an OpenCV project to provide easy labeling for computer vision datasets. CVAT allows to utilize an easy to use interface to make annotations efficiently. This tool generates an xml file for each image. As shown in Fig 1.9 each type of defect is annotated with table annotation.
-<!-- The GitHub link to the source code: Annotation GitHub file <a href="" target="_blank"></a> -->
+All the defects are annotated through an annotation tool CVAT. It is an OpenCV project to provide easy labeling for computer vision datasets. CVAT allows to utilize an easy to use interface to make annotations efficiently. This tool generates an xml file for each image. As shown in Fig 1.9 each type of defect is annotated with table annotation.<br/>
+*The GitHub link to the source code: *<a href="https://github.com/baggageai/dml-prescinto-solar-ai/blob/main/solarai/pre_processor/create_bbox_rotate_xml.py" target="_blank"> Annotation GitHub file </a>
 
-<!-- <img src="" width="400" height="200"><br/> -->
+<img src="https://user-images.githubusercontent.com/75617171/127717872-e9125712-1ee2-4e8d-9318-b7d565335c7d.png" width="400" height="200"><br/>
 > Fig 1.9 Each defect is annotated with table annotation
 
 ## Defect Annotation 
 Defect annotation is making rectangular boundary around the defected panel. Fig 1.10 is a sliced inferno image which shows different types of defect annotated. Annotation creates an XML file with the Xmin, Ymin, Xmax, Ymax value of the solar panel and the defect type.
 
-<!-- <img src="" width="400" height="200"><br/> -->
+<img src="https://user-images.githubusercontent.com/75617171/127718003-73d03f62-1e4f-4238-a9b0-a5870710268c.png" width="400" height="200"><br/>
 > Fig 1.10 Annotation on Defect using CVAT
 
 ## Table Annotation 
 The tables in every sliced image is annotated. In annotation rectangular shape boundary is made around the tables. Fig 1.11 shows the Annotation of table.
 
-<!-- <img src="" width="400" height="200"><br/> -->
+<img src="https://user-images.githubusercontent.com/75617171/127718005-c1743f06-9387-4d3c-a384-fd0bfdb63d8c.png" width="400" height="200"><br/>
 > Fig 1.11 Annotation on Defect using CVAT
 
 There are 7 type of defects in solar panels. These defects are annotated and used to train the model about defects. 
@@ -199,7 +199,7 @@ Model is trained for tables and each defect separately. After annotations all th
 
 ## Training the model for detection of defects
 For each defect the model was trained separately. The dataset annotated in previous steps is split into train and test data such that 80% data is used for training and with 20% data testing is done where, an entire orthomosaic file is used for training and entire another orthomosaic file is used for testing. If 5 orthomosaic files are shared then 3 of them are used for training and 2 for testing. Darknet<a href="" target="_blank"></a> is used for training and testing which is a framework for object detection classifier. Then anchor boxes for each of the defect is calculated. Refer the GitHub link <a href="" target="_blank"></a> to calculate anchor box which is instructed in readme file to calculate anchors:<br/>
-```darknet.exe detector calc_anchors data/obj.data -num_of_clusters 12 -width 640 -height 640 ```
+```darknet.exe detector calc_anchors data/obj.data -num_of_clusters 12 -width 640 -height 640 ```<br/>
 After calculating anchor boxes image processing techniques mention in the preprocessing (Augmentation) are applied. The model is then trained to obtain mish YOLOv4 P4 (640 X 640).
 
 ## Validating the model for defects detection
@@ -212,11 +212,11 @@ Same steps (5(a)) are followed for model training of detection of tables as for 
 Same steps (5(b)) are followed for validation of tables detection as for validation of defects detection.
 
 ## Masking and Contouring (To be used elsewhere)
-The tables are present in many different size in a plant which is mapped using contouring. Image is converted into a black and white image which gives the total length of all table in a line which is mapped using the width of a single panel x number of columns which gives length of one table. All the tables are then traced and boundary of rectangular boxes is drawn around each table which is then sorted and mapped with the defects.
+The tables are present in many different size in a plant which is mapped using contouring. Image is converted into a black and white image which gives the total length of all table in a line which is mapped using the width of a single panel x number of columns which gives length of one table. All the tables are then traced and boundary of rectangular boxes is drawn around each table which is then sorted and mapped with the defects.<br/>
 The GitHub link to the source code: (file link )
 
 ## Mapping (To be used elsewhere)
-Mapping of every defect with the corresponding tables. This is done by calculating minimum distance between the centroid (latitude and longitude) of table and defect.
+Mapping of every defect with the corresponding tables. This is done by calculating minimum distance between the centroid (latitude and longitude) of table and defect.<br/>
 The GitHub link to the source code: (file link)
 
 # Deployment of the model 
@@ -257,13 +257,13 @@ The four API’s are :
 #### Defect Detection 
 This API is used to detect the defects from Orthomosaic images.
 After the main call is directed by the solarai app to api services app, the URL “v1/defect_detection“ calls the function views.detection , which requests for parameters.
-where parameters required are:
-In a directory three image files should be there with the given naming convention (Ref. 3(a), 3(b) and 3(c)) and path of the directory should be passed in image_path. Example : image_path=/home/ubuntu/solaraidata/
-panel_orientaion = PORTRAIT / LANDSCAPE (Ref. 3(d))
-no_of_columns = 10 (Ref. Fig 1.5)
-no_of_rows = 4 (Ref. Fig 1.5)
+where parameters required are:<br/>
+- In a directory three image files should be there with the given naming convention (Ref. 3(a), 3(b) and 3(c)) and path of the directory should be passed in image_path. Example  image_path=/home/ubuntu/solaraidata/
+- panel_orientaion = PORTRAIT / LANDSCAPE (Ref. 3(d))
+- no_of_columns = 10 (Ref. Fig 1.5)
+- no_of_rows = 4 (Ref. Fig 1.5)
 All the inputs are send to a function imported from tasks.py named “detection” which performs operations of rotation and slice on the orthomosaic where the rotation and slice functions are imported from rotate orthomosaic.py and slice orthomosaic.py respectively, then loads the appropriate weights of model on the type of image given, then writes the output in the output directory (where can one find the output directory) and returns “Task completed” on the completion of task to the detection function of views.py which then writes the status of the task and updates it in the celery (imported as app) with the respected task id. Celery is an asynchronous task queue which stores the tasks id and the status of task. Then detection function of views.py return a JSON response.
-The JSON response received after sending the POST request contains: 
+The JSON response received after sending the POST request contains: <br/>
    i. An “id” will be provided which will be used for further API calls.
    ii. ”get_detection” shows the status of the POST call made. The response can be : 
                       1. Success: Conveys that data has been received by get_detection API .
