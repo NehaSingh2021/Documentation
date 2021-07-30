@@ -53,15 +53,13 @@ Fig 1.1 Normalized sliced grey scale Radiometric Image
 ## Inferno Orthomosaic
 Inferno orthomosaic image is created by radiometric image by pouring Inferno color scheme in it as shown in Fig 1.2. The name of this input image should be in the instructed format inside the directory that is “plantname_mission_inferno.tif”.
 
-![2117566491](https://user-images.githubusercontent.com/75617171/127693062-76afd971-7d54-4d47-950c-ccc6efed7446.png)
+![2117566491](https://user-images.githubusercontent.com/75617171/127693062-76afd971-7d54-4d47-950c-ccc6efed7446.png){:height="36px" width="36px"}
 
 Fig 1.2 Inferno orthomosaic image
 
 ## RGB Orthomosaic
 RGB orthomosaic image is a normal image which contains three channels of color red, blue and green made by stitching raw images captured by flying drone over solar plant as shown in Fig 1.3. The name of this input image should be in the instructed format inside the directory that is “plantname_mission_rgb.tif”.
-
 <img src="https://user-images.githubusercontent.com/75617171/127639002-306c5ce7-73e4-4520-85f6-d2f2fa9e969b.png" width="100" height="100">
-
 Fig 1.3 RGB orthomosaic image
 
 ## Panel orientation
