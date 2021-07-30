@@ -128,13 +128,13 @@ The types of defects are:
 #### BYPASS DIODE ACTIVE: 
 Part of the module surface is homogeneously heated up and heat dissipation by the bypass diode, which is operating, is visible. Temperature difference of the glass on top of the junction box containing the operating bypass diode differs with construction (or failure of a bypass diode). Loss of contact at a cell connection might lead to a serial arc visible.
 
-<img src="https://user-images.githubusercontent.com/75617171/127718492-63627240-e47f-4593-baf9-4e53c01b8a4a.png" width="200" height="200"><br/>
+<img src="https://user-images.githubusercontent.com/75617171/127718492-63627240-e47f-4593-baf9-4e53c01b8a4a.png" width="200" height="100"><br/>
 > Fig 1.12 Bypass Diode Active defect image
 
 #### MODULE SHORT CIRCUIT: 
 At one or more substrings, easily mistaken for cell breakage or cell defects, Potential induced degradation (PID) or mismatch (or failure of a bypass diode).
 
-<img src="https://user-images.githubusercontent.com/75617171/127718476-2281271c-f569-4907-98d4-96790fdddfea.png" width="200" height="200"><br/>
+<img src="https://user-images.githubusercontent.com/75617171/127718476-2281271c-f569-4907-98d4-96790fdddfea.png" width="200" height="50"><br/>
 > Fig 1.13 Module Short Circuit defect image
 
 #### MODULE HOT: 
