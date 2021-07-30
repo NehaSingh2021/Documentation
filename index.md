@@ -172,7 +172,7 @@ Various image processing techniques are used to enhance the image quality.
 These techniques vary from defect to defect. Examples of these techniques are CLAHE, Unsharp Masking etc., as shown in Fig 1.19.
 Some techniques used are:
 
-## Image Normalization 
+#### Image Normalization 
 The images are normalized so that there is minimum variation in the image quality of various orthomosaics as it helps in improving the accuracy of model.
 
 #### Contrast Limited Adaptive Histogram Equalization (CLAHE)
@@ -188,13 +188,13 @@ Sharpening can help you emphasize texture and detail, and is critical when post-
 ## Augmentation
 Image augmentation is a technique of altering the existing data to create some more data for the model training process. Some of the image augmentation technique used are horizontal flip, vertical flip and diagonal flip.
 
-<!-- <img src="" width="400" height="200"><br/> -->
+<img src="https://user-images.githubusercontent.com/75617171/127719096-e009908f-918d-44a6-9534-386938b173aa.png" width="800" height="400"><br/>
 > Fig 1.20 Image augmentation.
 
 # Model Training 
 Model is trained for tables and each defect separately. After annotations all the rotated, sliced images and xml files with their respective name as image name is stored in a folder which is then used to train the model.
 
-<!-- <img src="" width="400" height="200"><br/> -->
+<img src="https://user-images.githubusercontent.com/75617171/127719170-0bafd95f-c0c7-41c6-925d-64a40d93813d.jpeg" width="800" height="600"><br/>
 >Fig 1.21 Model Training Flow Chart
 
 ## Training the model for detection of defects
@@ -222,12 +222,12 @@ The GitHub link to the source code: (file link)
 # Deployment of the model 
 For first time activity the deployment process given in Fig 1.22 is followed for each plant.
 
-<!-- <img src="" width="400" height="200"><br/> -->
+<img src="https://user-images.githubusercontent.com/75617171/127719173-042a9d79-4bd6-48a2-824a-332ad4bd195f.png" width="400" height="200"><br/>
 > Fig 1.22 First time activity for each plant
 
 Deployment process for defect detection for each plant is given in Fig 1.23.
 
-<!-- <img src="" width="400" height="200"><br/> -->
+<img src="https://user-images.githubusercontent.com/75617171/127719177-50af8798-5747-402d-9d47-895b48762aec.png" width="400" height="200"><br/>
 >Fig 1.23 Defect identification for each plant
 
 Deployment process for defect detection for each plant is given in Fig 1.23.
