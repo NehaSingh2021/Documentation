@@ -20,11 +20,11 @@
     - [Image enhancement](#image-enhancement)
     - [Augmentation](#augmentation)
 5. [Model Training](#model-training)
-5.1 Training the model for detection of defects
-5.2 Validating the model for defects detection
-5.3 Training the model for detection of tables
-5.4 Validating the model for table detection
-5.5 Masking and Contouring (To be used elsewhere)
+    - [Training the model for detection of defects](#training-the-model-for-detection-of-defects)
+    - [Validating the model for defects detection](#validating-the-model-for-defects-detection)
+    - [Training the model for detection of tables](#training-the-model-for-detection-of-tables)
+    - [Validating the model for table detection](#validating-the-model-for-table-detection)
+    - [Masking and Contouring (To be used elsewhere)](#masking-and-contouring-to-be-used-elsewhere)
 5.6 Mapping (To be used elsewhere)
 6 Deployment of the model 
 6.1 Creating SO files 
