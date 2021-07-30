@@ -14,7 +14,7 @@
     - [Rotation](#rotation)
     - [Slicing](#slicing)
     - [Annotation](#annotation)
-     - [Defect Annotation](#Defect Annotation)
+          - [Defect Annotation](#Defect Annotation)
 4.4.2 Table Annotation 
 4.5 Image enhancement 
 4.6 Augmentation
