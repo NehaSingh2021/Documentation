@@ -3,32 +3,32 @@
 1. [Overview](#overview)
 2. [Table of Contents](#table-of-contents)
 3. [Input](#input)<br/>
-    a. [Radiometric Orthomosaic](#radiometric-orthomosaic)<br/>
-    b. [Inferno Orthomosaic](#inferno-orthomosaic)<br/>
-    c. [RGB Orthomosaic](#rgb-orthomosaic)<br/>
-    d. [Panel orientation](#panel-orientation)<br/>
-    e. [No of columns in a table](#no-of-columns-in-a-table)<br/>
-    f. [No of rows in a table](#no-of-rows-in-a-table)
-4. [Preprocessing](#preprocessing)<br/>
-    a. [Normalization of radiometric orthomosaic](#normalization-of-radiometric-orthomosaic)<br/>
-    b. [Rotation](#rotation)<br/>
-    c. [Slicing](#slicing)<br/>
-    d. [Annotation (required for training and QA)](#annotation-required-for-training-and-qa)<br/>
-          i [Defect Annotation](#defect-annotation)<br/>
-          ii [Table Annotation](#table-annotation)<br/>
-    e. [Image enhancement](#image-enhancement)<br/>
-    f. [Augmentation](#augmentation)
-5. [Model Training](#model-training)<br/>
-    a. [Training the model for detection of defects](#training-the-model-for-detection-of-defects)<br/>
-    b. [Validating the model for defects detection](#validating-the-model-for-defects-detection)<br/>
-    c. [Training the model for detection of tables](#training-the-model-for-detection-of-tables)<br/>
-    d. [Validating the model for table detection](#validating-the-model-for-table-detection)<br/>
-    e. [Masking and Contouring (To be used elsewhere)](#masking-and-contouring-to-be-used-elsewhere)<br/>
-    f. [Mapping (To be used elsewhere)](#mapping-to-be-used-elsewhere)
-6. [Deployment of the model](#deployment-of-the-model)<br/>
-    a [Creating SO files](#creating-so-files)<br/>
-    b [Input Path](#input-path)<br/>
-    c [API’s](#apis)<br/>
+    - [Radiometric Orthomosaic](#radiometric-orthomosaic)
+    - [Inferno Orthomosaic](#inferno-orthomosaic)
+    - [RGB Orthomosaic](#rgb-orthomosaic)
+    - [Panel orientation](#panel-orientation)
+    - [No of columns in a table](#no-of-columns-in-a-table)
+    - [No of rows in a table](#no-of-rows-in-a-table)
+4. [Preprocessing](#preprocessing)
+    - [Normalization of radiometric orthomosaic](#normalization-of-radiometric-orthomosaic)
+    - [Rotation](#rotation)
+    - [Slicing](#slicing)
+    - [Annotation (required for training and QA)](#annotation-required-for-training-and-qa)<br/>
+       i [Defect Annotation](#defect-annotation)<br/>
+       ii [Table Annotation](#table-annotation)
+    - [Image enhancement](#image-enhancement)
+    - [Augmentation](#augmentation)
+5. [Model Training](#model-training)
+    - [Training the model for detection of defects](#training-the-model-for-detection-of-defects)
+    - [Validating the model for defects detection](#validating-the-model-for-defects-detection)
+    - [Training the model for detection of tables](#training-the-model-for-detection-of-tables)
+    - [Validating the model for table detection](#validating-the-model-for-table-detection)
+    - [Masking and Contouring (To be used elsewhere)](#masking-and-contouring-to-be-used-elsewhere)
+    - [Mapping (To be used elsewhere)](#mapping-to-be-used-elsewhere)
+6. [Deployment of the model](#deployment-of-the-model)
+    - [Creating SO files](#creating-so-files)
+    - [Input Path](#input-path)
+    - [API’s](#apis)<br/>
           i [Defect Detection](#defect-detection)<br/>
           ii [Get Result](#get-result)<br/>
           iii [Defect Correction (Remaining)](#defect-correction-remaining)<br/>
