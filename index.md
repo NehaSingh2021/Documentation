@@ -158,13 +158,13 @@ Difference in temperature increases with load, cell efficiency and number of cel
 #### DIRT/SHADOW: 
 Assessable by thermal pattern, visual Image and classified typically as an extended area abnormality. Compared with RGB Tiff.
 
-<img src="https://user-images.githubusercontent.com/75617171/127718467-d5b9dabc-536d-46c5-863a-84bd7d6178e9.png" width="200" height="100"><br/>
+<img src="https://user-images.githubusercontent.com/75617171/127718467-d5b9dabc-536d-46c5-863a-84bd7d6178e9.png" width="200" height="50"><br/>
 > Fig 1.17 Dirt/Shadow defect image
 
 #### VEGETATION : 
 The nearby area plants may grow tall and they may lay on top of panels.  It covers the solar panels which usually occurs at the edge of the panel, and is sometimes seen as a tiny bright dot or shadowed.
 
-<img src="https://user-images.githubusercontent.com/75617171/127718466-6a3c43c9-3011-4ef3-b4d8-c0ec6802f560.png" width="200" height="100"><br/>
+<img src="https://user-images.githubusercontent.com/75617171/127718466-6a3c43c9-3011-4ef3-b4d8-c0ec6802f560.png" width="200" height="70"><br/>
 >Fig 1.18 Vegetation defect image
 
 ## Image enhancement 
