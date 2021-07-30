@@ -68,7 +68,7 @@ The orientation of the panel with respect to tables is either portrait or landsc
 NOTE: The input name of portrait of landscape needs to be in all caps format.
 As shown below in Fig 1.4 (a) Is a Portrait Panel with rotation and without rotation respectively. Fig 1.4 (b) Is a Landscape Panel with rotation and without rotation respectively.
 
-<img src="https://user-images.githubusercontent.com/75617171/127713133-1e8f28a8-97a1-4f0c-a37b-7ac51685b640.png" width="400" height="00"><br/>
+<img src="https://user-images.githubusercontent.com/75617171/127713133-1e8f28a8-97a1-4f0c-a37b-7ac51685b640.png" width="400" height="200"><br/>
 Fig 1.4 (a) Portrait Panel with rotation and without rotation
 <!-- <img src="" width="400" height="00"><br/> -->
 Fig 1.4 (b) Landscape Panel with rotation and without rotation
