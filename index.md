@@ -52,7 +52,7 @@ Inferno orthomosaic image is created by radiometric image by pouring Inferno col
 ## RGB Orthomosaic
 RGB orthomosaic image is a normal image which contains three channels of color red, blue and green made by stitching raw images captured by flying drone over solar plant as shown in Fig 1.3. The name of this input image should be in the instructed format inside the directory that is “plantname_mission_rgb.tif”.
 
-<img src="https://user-images.githubusercontent.com/75617171/127713046-cc48e1b3-e7a9-4ff2-98a8-b662ced9ecb6.png" width="200" height="200"><br/>
+<img src="https://user-images.githubusercontent.com/75617171/127713046-cc48e1b3-e7a9-4ff2-98a8-b662ced9ecb6.png" width="300" height="300"><br/>
 > Fig 1.3 RGB orthomosaic image
 
 ## Panel orientation
@@ -60,10 +60,10 @@ The orientation of the panel with respect to tables is either portrait or landsc
 NOTE: The input name of portrait of landscape needs to be in all caps format.
 As shown below in Fig 1.4 (a) Is a Portrait Panel with rotation and without rotation respectively. Fig 1.4 (b) Is a Landscape Panel with rotation and without rotation respectively.
 
-<img src="https://user-images.githubusercontent.com/75617171/127713133-1e8f28a8-97a1-4f0c-a37b-7ac51685b640.png" width="400" height="200"><br/>
+<img src="https://user-images.githubusercontent.com/75617171/127713133-1e8f28a8-97a1-4f0c-a37b-7ac51685b640.png" width="600" height="200"><br/>
 > Fig 1.4 (a) Portrait Panel with rotation and without rotation
 
-<img src="https://user-images.githubusercontent.com/75617171/127713549-62c917a0-5993-4f2e-a116-7dd533b5bf18.jpg" width="400" height="200"><br/>
+<img src="https://user-images.githubusercontent.com/75617171/127713549-62c917a0-5993-4f2e-a116-7dd533b5bf18.jpg" width="500" height="200"><br/>
 > Fig 1.4 (b) Landscape Panel with rotation and without rotation
 
 ## No of columns in a table
@@ -72,7 +72,7 @@ There are many tables in solar plant. So number of columns of a single table is 
 ## No of rows in a table
 Number of rows of a single table is to be provided. As shown in Fig 1.5 No of rows in this image is 4. The input is to be given as “no_of_rows_per_table = 4“.
 
-<img src="https://user-images.githubusercontent.com/75617171/127714053-2cec3b3c-3ea7-4cb7-92a4-ba348a400a46.png" width="200" height="400"><br/>
+<img src="https://user-images.githubusercontent.com/75617171/127714053-2cec3b3c-3ea7-4cb7-92a4-ba348a400a46.png" width="300" height="400"><br/>
 > Fig 1.5 No of columns and rows per table
 
 # Preprocessing
@@ -83,13 +83,13 @@ Normalization allows better correspondence between temperature values irrespecti
 Assumptions: Minimum temperature of any plant is considered to be above -50 degrees Celsius.
 <!-- The GitHub link to source code : <a href="" target="_blank"></a> -->
 <!-- GitHub Rotate_orthomosaic.py file -->
-<img src="https://user-images.githubusercontent.com/75617171/127715587-176c22d2-b67a-4074-9bfa-2b560b7ca631.png" width="200" height="200"><br/>
+<img src="https://user-images.githubusercontent.com/75617171/127715587-176c22d2-b67a-4074-9bfa-2b560b7ca631.png" width="300" height="300"><br/>
 > Fig 1.6 Normalized sliced greyscale Radiometric Image
 
 ## Rotation 
 The orthomosaics (Inferno and Radiometric) images are rotated so that the panels are either Portrait or Landscape as shown in Fig 1.7. This is done by finding the angle of rotation. This is a mandatory requirement as the annotation boxes are always horizontal rectangles of the entire panel/table.
 
-<!-- <img src="" width="400" height="200"><br/> -->
+<img src="https://user-images.githubusercontent.com/75617171/127716262-8042368c-73cc-4342-9398-b5967f42d154.png" width="300" height="300"><br/>
 > Fig 1.7 Above is a original inferno image, below is a rotated inferno image
 
 It searches an image file with extensions (jpg, png, jpeg, PNG, bmp, BMP, tif, Tif) so, all the images should be in the given format. 
