@@ -194,7 +194,7 @@ Image augmentation is a technique of altering the existing data to create some m
 # Model Training 
 Model is trained for tables and each defect separately. After annotations all the rotated, sliced images and xml files with their respective name as image name is stored in a folder which is then used to train the model.
 
-<img src="https://user-images.githubusercontent.com/75617171/127719170-0bafd95f-c0c7-41c6-925d-64a40d93813d.jpeg" width="800" height="600"><br/>
+<img src="https://user-images.githubusercontent.com/75617171/127719170-0bafd95f-c0c7-41c6-925d-64a40d93813d.jpeg" width="900" height="800"><br/>
 >Fig 1.21 Model Training Flow Chart
 
 ## Training the model for detection of defects
