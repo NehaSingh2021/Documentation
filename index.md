@@ -16,6 +16,7 @@
     - [Annotation (required for training and QA)](#annotation-required-for-training-and-qa)
      
        i [Defect Annotation](#defect-annotation)
+       
        ii [Table Annotation](#table-annotation) 
     - [Image enhancement](#image-enhancement)
     - [Augmentation](#augmentation)
@@ -32,8 +33,11 @@
     - [API’s](#apis)
     
        i [Defect Detection](#defect-detection)
+       
        ii [Get Result](#get-result)
+       
        iii [Defect Correction (Remaining)](#defect-correction-remaining)
+       
        iv [Table Detection](#table-detection)
 
 
