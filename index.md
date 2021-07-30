@@ -90,7 +90,7 @@ The GitHub link to source code : GitHub Rotate_orthomosaic.py file
 The orthomosaics (Inferno and Radiometric) images are rotated so that the panels are either Portrait or Landscape as shown in Fig 1.7. This is done by finding the angle of rotation. This is a mandatory requirement as the annotation boxes are always horizontal rectangles of the entire panel/table.
 
 <!-- <img src="" width="400" height="200"><br/> -->
-> Fig 1.7 Above is a original inferno image, below is a rotated inferno image
+> Fig 1.7 Above is a original inferno image, below is a rotated inferno image<br/>
 It searches an image file with extensions (jpg, png, jpeg, PNG, bmp, BMP, tif, Tif) so, all the images should be in the given format. 
 The GitHub link to source code : GitHub Rotate_orthomosaic.py file
 
@@ -99,6 +99,7 @@ The orthomosaic (Inferno and normalized Radiometric) images are very big in dime
 
 <!-- <img src="" width="400" height="200"><br/> -->
 > Fig 1.8 Both are orthomosaic images sliced with each image covering 3-4 tables
+
 The slicing requires input_dir, output_dir, panel_orientation, tables, tables_per_slice, no_of_panels_in_table_from_plant as inputs and returns sliced images in a created directory.
 The GitHub link to the source code: GitHub Slice_orthomosaic.py file
 
