@@ -60,8 +60,7 @@ Fig 1.2 Inferno orthomosaic image
 ## RGB Orthomosaic
 RGB orthomosaic image is a normal image which contains three channels of color red, blue and green made by stitching raw images captured by flying drone over solar plant as shown in Fig 1.3. The name of this input image should be in the instructed format inside the directory that is “plantname_mission_rgb.tif”.
 
-<img src="https://user-images.githubusercontent.com/75617171/127713046-cc48e1b3-e7a9-4ff2-98a8-b662ced9ecb6.png" width="200" height="200">
-
+<img src="https://user-images.githubusercontent.com/75617171/127713046-cc48e1b3-e7a9-4ff2-98a8-b662ced9ecb6.png" width="200" height="200"><br/>
 Fig 1.3 RGB orthomosaic image
 
 ## Panel orientation
@@ -69,8 +68,9 @@ The orientation of the panel with respect to tables is either portrait or landsc
 NOTE: The input name of portrait of landscape needs to be in all caps format.
 As shown below in Fig 1.4 (a) Is a Portrait Panel with rotation and without rotation respectively. Fig 1.4 (b) Is a Landscape Panel with rotation and without rotation respectively.
 
+<img src="https://user-images.githubusercontent.com/75617171/127713133-1e8f28a8-97a1-4f0c-a37b-7ac51685b640.png" width="400" height="00"><br/>
 Fig 1.4 (a) Portrait Panel with rotation and without rotation
-
+<!-- <img src="" width="400" height="00"><br/> -->
 Fig 1.4 (b) Landscape Panel with rotation and without rotation
 
 ## No of columns in a table
