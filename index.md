@@ -14,8 +14,8 @@
     b. [Rotation](#rotation)<br/>
     c. [Slicing](#slicing)<br/>
     d. [Annotation (required for training and QA)](#annotation-required-for-training-and-qa)<br/>
-       i [Defect Annotation](#defect-annotation)<br/>
-       ii [Table Annotation](#table-annotation)
+          i [Defect Annotation](#defect-annotation)<br/>
+          ii [Table Annotation](#table-annotation)<br/>
     e. [Image enhancement](#image-enhancement)<br/>
     f. [Augmentation](#augmentation)
 5. [Model Training](#model-training)<br/>
@@ -29,10 +29,10 @@
     a [Creating SO files](#creating-so-files)<br/>
     b [Input Path](#input-path)<br/>
     c [API’s](#apis)<br/>
-       i [Defect Detection](#defect-detection)<br/>
-       ii [Get Result](#get-result)<br/>
-       iii [Defect Correction (Remaining)](#defect-correction-remaining)<br/>
-       iv [Table Detection](#table-detection)
+          i [Defect Detection](#defect-detection)<br/>
+          ii [Get Result](#get-result)<br/>
+          iii [Defect Correction (Remaining)](#defect-correction-remaining)<br/>
+          iv [Table Detection](#table-detection)
 
 
 
