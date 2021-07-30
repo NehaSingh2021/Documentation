@@ -33,7 +33,7 @@
     
        i [Defect Detection](#defect-detection)
        ii [Get Result](#get-result)
-       iii [Defect Correction (Remaining)](#defect-correctionremaining)
+       iii [Defect Correction (Remaining)](#defect-correction-remaining)
        iv [Table Detection](#table-detection)
 
 
