@@ -264,10 +264,10 @@ where parameters required are:<br/>
 - no_of_rows = 4 (Ref. Fig 1.5)<br/>
 All the inputs are send to a function imported from tasks.py named “detection” which performs operations of rotation and slice on the orthomosaic where the rotation and slice functions are imported from rotate orthomosaic.py and slice orthomosaic.py respectively, then loads the appropriate weights of model on the type of image given, then writes the output in the output directory (where can one find the output directory) and returns “Task completed” on the completion of task to the detection function of views.py which then writes the status of the task and updates it in the celery (imported as app) with the respected task id. Celery is an asynchronous task queue which stores the tasks id and the status of task. Then detection function of views.py return a JSON response.<br/>
 The JSON response received after sending the POST request contains: <br/>
-   i. An “id” will be provided which will be used for further API calls.<br/>
-   ii. ”get_detection” shows the status of the POST call made. The response can be : <br/>
-                      1. Success: Conveys that data has been received by get_detection API .<br/>
-                      2. Pending: Conveys that the process is in progress.<br/>
+   1. An “id” will be provided which will be used for further API calls.<br/>
+   2. ”get_detection” shows the status of the POST call made. The response can be : <br/>
+      - Success: Conveys that data has been received by get_detection API .<br/>
+      - Pending: Conveys that the process is in progress.<br/>
                       3. Failure: Conveys that the request got failed due to some error.<br/>
    iii. ”db_upload_status” response can be either True or False.<br/>
                       1. True: The upload in database was successful.<br/>
