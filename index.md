@@ -46,16 +46,14 @@
 ## Radiometric Orthomosaic
 Radiometric orthomosaic image is made by stitching raw thermal images captured by flying drone over solar plant. It contains temperature data. As shown below in Fig 1.1 it is a sliced normalized grey scale radiometric image. The name of this input image should be in the instructed format inside the directory that is “plantname_mission_radiometric.tif”.
 
-<img src="https://user-images.githubusercontent.com/75617171/127639002-306c5ce7-73e4-4520-85f6-d2f2fa9e969b.png" width="200" height="200">
-
-Fig 1.1 Normalized sliced grey scale Radiometric Image
+<img src="https://user-images.githubusercontent.com/75617171/127639002-306c5ce7-73e4-4520-85f6-d2f2fa9e969b.png" width="200" height="200"><br/>
+*Fig 1.1 Normalized sliced grey scale Radiometric Image*
 
 ## Inferno Orthomosaic
 Inferno orthomosaic image is created by radiometric image by pouring Inferno color scheme in it as shown in Fig 1.2. The name of this input image should be in the instructed format inside the directory that is “plantname_mission_inferno.tif”.
 
-<img src="https://user-images.githubusercontent.com/75617171/127693062-76afd971-7d54-4d47-950c-ccc6efed7446.png" width="200" height="200">
-
-Fig 1.2 Inferno orthomosaic image
+<img src="https://user-images.githubusercontent.com/75617171/127693062-76afd971-7d54-4d47-950c-ccc6efed7446.png" width="200" height="200"><br/>
+> Fig 1.2 Inferno orthomosaic image
 
 ## RGB Orthomosaic
 RGB orthomosaic image is a normal image which contains three channels of color red, blue and green made by stitching raw images captured by flying drone over solar plant as shown in Fig 1.3. The name of this input image should be in the instructed format inside the directory that is “plantname_mission_rgb.tif”.
@@ -69,9 +67,10 @@ NOTE: The input name of portrait of landscape needs to be in all caps format.
 As shown below in Fig 1.4 (a) Is a Portrait Panel with rotation and without rotation respectively. Fig 1.4 (b) Is a Landscape Panel with rotation and without rotation respectively.
 
 <img src="https://user-images.githubusercontent.com/75617171/127713133-1e8f28a8-97a1-4f0c-a37b-7ac51685b640.png" width="400" height="200"><br/>
-Fig 1.4 (a) Portrait Panel with rotation and without rotation
-<!-- <img src="" width="400" height="00"><br/> -->
-Fig 1.4 (b) Landscape Panel with rotation and without rotation
+*Fig 1.4 (a) Portrait Panel with rotation and without rotation*
+
+<img src="https://user-images.githubusercontent.com/75617171/127713549-62c917a0-5993-4f2e-a116-7dd533b5bf18.jpg" width="400" height="00"><br/>
+> Fig 1.4 (b) Landscape Panel with rotation and without rotation
 
 ## No of columns in a table
 There are many tables in solar plant. So number of columns of a single table is to be provided. As shown in Fig 1.5 No of columns in this image is 10. The input is to be given as “no_of_columns_per_table = 10“.
@@ -79,6 +78,7 @@ There are many tables in solar plant. So number of columns of a single table is 
 ## No of rows in a table
 Number of rows of a single table is to be provided. As shown in Fig 1.5 No of rows in this image is 4. The input is to be given as “no_of_rows_per_table = 4“.
 
+<!-- <img src="" width="400" height="00"><br/> -->
 Fig 1.5 No of columns and rows per table
 
 # Preprocessing
@@ -89,11 +89,13 @@ Normalization allows better correspondence between temperature values irrespecti
 Assumptions: Minimum temperature of any plant is considered to be above -50 degrees Celsius.
 The GitHub link to source code : GitHub Rotate_orthomosaic.py file
 
+<!-- <img src="" width="400" height="00"><br/> -->
 Fig 1.6 Normalized sliced greyscale Radiometric Image
 
 ## Rotation 
 The orthomosaics (Inferno and Radiometric) images are rotated so that the panels are either Portrait or Landscape as shown in Fig 1.7. This is done by finding the angle of rotation. This is a mandatory requirement as the annotation boxes are always horizontal rectangles of the entire panel/table.
 
+<!-- <img src="" width="400" height="00"><br/> -->
 Fig 1.7 Above is a original inferno image, below is a rotated inferno image
 It searches an image file with extensions (jpg, png, jpeg, PNG, bmp, BMP, tif, Tif) so, all the images should be in the given format. 
 The GitHub link to source code : GitHub Rotate_orthomosaic.py file
@@ -101,6 +103,7 @@ The GitHub link to source code : GitHub Rotate_orthomosaic.py file
 ## Slicing
 The orthomosaic (Inferno and normalized Radiometric) images are very big in dimensions, such size cannot be directly consumed by any object detection algorithm. So, images are sliced into small size (as shown in Fig 1.8) so that image can be consumed by the algorithm. Each slice typically covers 3-4 tables.
 
+<!-- <img src="" width="400" height="00"><br/> -->
 Fig 1.8 Both are orthomosaic images sliced with each image covering 3-4 tables
 The slicing requires input_dir, output_dir, panel_orientation, tables, tables_per_slice, no_of_panels_in_table_from_plant as inputs and returns sliced images in a created directory.
 The GitHub link to the source code: GitHub Slice_orthomosaic.py file
@@ -109,6 +112,7 @@ The GitHub link to the source code: GitHub Slice_orthomosaic.py file
 All the defects are annotated through an annotation tool CVAT. It is an OpenCV project to provide easy labeling for computer vision datasets. CVAT allows to utilize an easy to use interface to make annotations efficiently. This tool generates an xml file for each image. As shown in Fig 1.9 each type of defect is annotated with table annotation.
 The GitHub link to the source code: Annotation GitHub file
 
+<!-- <img src="" width="400" height="00"><br/> -->
 Fig 1.9 Each defect is annotated with table annotation
 
 ## Defect Annotation 
