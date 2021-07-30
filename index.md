@@ -45,6 +45,7 @@
 # Input
 ## Radiometric Orthomosaic
 Radiometric orthomosaic image is made by stitching raw thermal images captured by flying drone over solar plant. It contains temperature data. As shown below in Fig 1.1 it is a sliced normalized grey scale radiometric image. The name of this input image should be in the instructed format inside the directory that is “plantname_mission_radiometric.tif”.
+
 ![radiometric](https://user-images.githubusercontent.com/75617171/127639002-306c5ce7-73e4-4520-85f6-d2f2fa9e969b.png)
 Fig 1.1 Normalized sliced grey scale Radiometric Image
 
