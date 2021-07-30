@@ -76,14 +76,13 @@ Number of rows of a single table is to be provided. As shown in Fig 1.5 No of ro
 > Fig 1.5 No of columns and rows per table
 
 # Preprocessing
-
 ## Normalization of radiometric orthomosaic 
 Scaling the radiometric image in grey color with the minimum and maximum values as the temperature difference in the solar plant. If in a plant if a temperature is of 30-50 degree then the entire image will be scaled for 20 degree of temperature difference. 30 degree will be considered as 0 pixel values and 50 degree will be considered as 255 pixel values.
 Normalization allows better correspondence between temperature values irrespective of location. (Higher temp locations may have temperatures from 35-45 degrees, lower temp locations may vary from 20-30 degrees) so by this process the data is preprocessed to be independent and identically distributed. The data contains many outliers, which tend to diminish the quality of the grayscale, so the outliers are clipped. For normalization of radiometric orthomosaic the input required is the Radiometric geotiff image path.
 Assumptions: Minimum temperature of any plant is considered to be above -50 degrees Celsius.
-The GitHub link to source code : GitHub Rotate_orthomosaic.py file
+The GitHub link to source code : <a href="https://nehasingh2021.github.io/Documentation/">GitHub Rotate_orthomosaic.py file</a>
 
-<!-- <img src="" width="400" height="200"><br/> -->
+<img src="https://user-images.githubusercontent.com/75617171/127715587-176c22d2-b67a-4074-9bfa-2b560b7ca631.png" width="400" height="200"><br/>
 > Fig 1.6 Normalized sliced greyscale Radiometric Image
 
 ## Rotation 
