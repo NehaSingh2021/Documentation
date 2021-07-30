@@ -32,9 +32,9 @@
     - [API’s](#apis)
     
        i [POST/api/v1/defect_detection](#postapiv1defect-detection)
-6.3.2 GET/api/v1/get_result
-6.3.3 POST/api/v1/defect_correction (Remaining)
-6.3.4 POST/api/v1/table_detection 
+       ii [GET/api/v1/get_result](#get/api/v1/get_result)
+       iii [POST/api/v1/defect_correction (Remaining)](#post-api-v1-defect_correctionremaining)
+       iv [POST/api/v1/table_detection](#post/api/v1/table-detection)
 
 
 
