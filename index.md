@@ -90,7 +90,8 @@ The GitHub link to source code : GitHub Rotate_orthomosaic.py file
 The orthomosaics (Inferno and Radiometric) images are rotated so that the panels are either Portrait or Landscape as shown in Fig 1.7. This is done by finding the angle of rotation. This is a mandatory requirement as the annotation boxes are always horizontal rectangles of the entire panel/table.
 
 <!-- <img src="" width="400" height="200"><br/> -->
-> Fig 1.7 Above is a original inferno image, below is a rotated inferno image<br/>
+> Fig 1.7 Above is a original inferno image, below is a rotated inferno image
+
 It searches an image file with extensions (jpg, png, jpeg, PNG, bmp, BMP, tif, Tif) so, all the images should be in the given format. 
 The GitHub link to source code : GitHub Rotate_orthomosaic.py file
 
@@ -119,44 +120,53 @@ Defect annotation is making rectangular boundary around the defected panel. Fig 
 ## Table Annotation 
 The tables in every sliced image is annotated. In annotation rectangular shape boundary is made around the tables. Fig 1.11 shows the Annotation of table.
 
-Fig 1.11 Annotation on Defect using CVAT
+<!-- <img src="" width="400" height="200"><br/> -->
+> Fig 1.11 Annotation on Defect using CVAT
+
 There are 7 type of defects in solar panels. These defects are annotated and used to train the model about defects. 
 The types of defects are:
 
 #### BYPASS DIODE ACTIVE: 
 Part of the module surface is homogeneously heated up and heat dissipation by the bypass diode, which is operating, is visible. Temperature difference of the glass on top of the junction box containing the operating bypass diode differs with construction (or failure of a bypass diode). Loss of contact at a cell connection might lead to a serial arc visible.
 
-Fig 1.12 Bypass Diode Active defect image
+<!-- <img src="" width="400" height="200"><br/> -->
+> Fig 1.12 Bypass Diode Active defect image
 
 #### MODULE SHORT CIRCUIT: 
 At one or more substrings, easily mistaken for cell breakage or cell defects, Potential induced degradation (PID) or mismatch (or failure of a bypass diode).
 
-Fig 1.13 Module Short Circuit defect image
+<!-- <img src="" width="400" height="200"><br/> -->
+> Fig 1.13 Module Short Circuit defect image
 
 #### MODULE HOT: 
 The module surface is homogeneously heated than other panels.
 
-Fig 1.14 Module Hot defect image
+<!-- <img src="" width="400" height="200"><br/> -->
+> Fig 1.14 Module Hot defect image
 
 #### STRING HOT: 
 The module surface is homogeneously heated. Temperature difference of the junction box is similar to operational state.
 
-Fig 1.15 String Hot defect image
+<!-- <img src="" width="400" height="200"><br/> -->
+> Fig 1.15 String Hot defect image
 
 #### HOTSPOT (Cell Failure, Cell Chipping and Delamination): 
 Difference in temperature increases with load, cell efficiency and number of cells in a substring.
 
-Fig 1.16 Hotspot defect image
+<!-- <img src="" width="400" height="200"><br/> -->
+> Fig 1.16 Hotspot defect image
 
 #### DIRT/SHADOW: 
 Assessable by thermal pattern, visual Image and classified typically as an extended area abnormality. Compared with RGB Tiff.
 
-Fig 1.17 Dirt/Shadow defect image
+<!-- <img src="" width="400" height="200"><br/> -->
+> Fig 1.17 Dirt/Shadow defect image
 
 #### VEGETATION : 
 The nearby area plants may grow tall and they may lay on top of panels.  It covers the solar panels which usually occurs at the edge of the panel, and is sometimes seen as a tiny bright dot or shadowed.
 
-Fig 1.18 Vegetation defect image
+<!-- <img src="" width="400" height="200"><br/> -->
+>Fig 1.18 Vegetation defect image
 
 ## Image enhancement 
 Various image processing techniques are used to enhance the image quality.
@@ -173,17 +183,20 @@ CLAHE is a variant of Adaptive histogram equalization (AHE) which takes care of 
 In Unsharp masking technique an image is sharpened by subtracting a blurred (Unsharp) version of the image from itself. An Unsharp filter is an operator used to sharpen an image.
 Sharpening can help you emphasize texture and detail, and is critical when post-processing most digital images. It detects edges and create a mask by subtracting the blurred image copy from it’s original image and then uses the mask to increase contrast at the edges by adding higher contrast copy, Unsharp mask and original image which results into sharpened final image.
 
-Fig 1.19 Image processing done using CLAHE, Unsharp Masking technique.
+<!-- <img src="" width="400" height="200"><br/> -->
+> Fig 1.19 Image processing done using CLAHE, Unsharp Masking technique.
 
 ## Augmentation
 Image augmentation is a technique of altering the existing data to create some more data for the model training process. Some of the image augmentation technique used are horizontal flip, vertical flip and diagonal flip.
 
-Fig 1.20 Image augmentation.
+<!-- <img src="" width="400" height="200"><br/> -->
+> Fig 1.20 Image augmentation.
 
 # Model Training 
 Model is trained for tables and each defect separately. After annotations all the rotated, sliced images and xml files with their respective name as image name is stored in a folder which is then used to train the model.
 
-Fig 1.21 Model Training Flow Chart
+<!-- <img src="" width="400" height="200"><br/> -->
+>Fig 1.21 Model Training Flow Chart
 
 ## Training the model for detection of defects
 For each defect the model was trained separately. The dataset annotated in previous steps is split into train and test data such that 80% data is used for training and with 20% data testing is done where, an entire orthomosaic file is used for training and entire another orthomosaic file is used for testing. If 5 orthomosaic files are shared then 3 of them are used for training and 2 for testing. Darknet is used for training and testing which is a framework for object detection classifier. Then anchor boxes for each of the defect is calculated. Refer the GitHub link to calculate anchor box which is instructed in readme file to calculate anchors: 
@@ -209,23 +222,30 @@ The GitHub link to the source code: (file link)
 # Deployment of the model 
 For first time activity the deployment process given in Fig 1.22 is followed for each plant.
 
-Fig 1.22 First time activity for each plant
+<!-- <img src="" width="400" height="200"><br/> -->
+> Fig 1.22 First time activity for each plant
+
 Deployment process for defect detection for each plant is given in Fig 1.23.
 
-Fig 1.23 Defect identification for each plant
+<!-- <img src="" width="400" height="200"><br/> -->
+>Fig 1.23 Defect identification for each plant
+
 Deployment process for defect detection for each plant is given in Fig 1.23.
 
 ## Creating SO files 
 To create SO files follow the instructions given in How to use Yolo as DLL and SO Libraries.
+```
 -On Linux
 -using build.sh or
 -build darknet using cmake or
 -set LIBSO=1 in the Makefile and do make
-
+```
+```
 -On Windows
 -using build.ps1 or
 -build darknet using cmake or
 -compile build\darknet\yolo_cpp_dll.sln solution or  build\darknet\yolo_cpp_dll_no_gpu.sln  solution.
+```
 
 ## Input Path
 The input files or images can be saved in a directory created here or there and can be fixed for later use. The path of directory is sent as input for image path or file location when calling the api for defect detection, table detection and defect correction respectively. API is a software intermediary that allows two applications to talk to each other. The “api/” in the URL directs the api to api services app via main app solarai urls.py which further instructs the api for all calls made with “api/” to be directed to the urls.py of api services app. The api services app has path set for all the API’s to it’s function stored in views.py file.
