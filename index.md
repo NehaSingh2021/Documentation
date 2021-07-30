@@ -40,13 +40,13 @@
 ## Radiometric Orthomosaic
 Radiometric orthomosaic image is made by stitching raw thermal images captured by flying drone over solar plant. It contains temperature data. As shown below in Fig 1.1 it is a sliced normalized grey scale radiometric image. The name of this input image should be in the instructed format inside the directory that is “plantname_mission_radiometric.tif”.
 
-<img src="https://user-images.githubusercontent.com/75617171/127639002-306c5ce7-73e4-4520-85f6-d2f2fa9e969b.png" width="200" height="200"><br/>
+<img src="https://user-images.githubusercontent.com/75617171/127639002-306c5ce7-73e4-4520-85f6-d2f2fa9e969b.png" width="300" height="300"><br/>
 > Fig 1.1 Normalized sliced grey scale Radiometric Image
 
 ## Inferno Orthomosaic
 Inferno orthomosaic image is created by radiometric image by pouring Inferno color scheme in it as shown in Fig 1.2. The name of this input image should be in the instructed format inside the directory that is “plantname_mission_inferno.tif”.
 
-<img src="https://user-images.githubusercontent.com/75617171/127693062-76afd971-7d54-4d47-950c-ccc6efed7446.png" width="200" height="200"><br/>
+<img src="https://user-images.githubusercontent.com/75617171/127693062-76afd971-7d54-4d47-950c-ccc6efed7446.png" width="300" height="300"><br/>
 > Fig 1.2 Inferno orthomosaic image
 
 ## RGB Orthomosaic
@@ -81,8 +81,8 @@ Number of rows of a single table is to be provided. As shown in Fig 1.5 No of ro
 Scaling the radiometric image in grey color with the minimum and maximum values as the temperature difference in the solar plant. If in a plant if a temperature is of 30-50 degree then the entire image will be scaled for 20 degree of temperature difference. 30 degree will be considered as 0 pixel values and 50 degree will be considered as 255 pixel values.
 Normalization allows better correspondence between temperature values irrespective of location. (Higher temp locations may have temperatures from 35-45 degrees, lower temp locations may vary from 20-30 degrees) so by this process the data is preprocessed to be independent and identically distributed. The data contains many outliers, which tend to diminish the quality of the grayscale, so the outliers are clipped. For normalization of radiometric orthomosaic the input required is the Radiometric geotiff image path.
 Assumptions: Minimum temperature of any plant is considered to be above -50 degrees Celsius.
-The GitHub link to source code : <a href="https://nehasingh2021.github.io/Documentation/" target="_blank">GitHub Rotate_orthomosaic.py file</a>
-
+<!-- The GitHub link to source code : <a href="" target="_blank"></a> -->
+<!-- GitHub Rotate_orthomosaic.py file -->
 <img src="https://user-images.githubusercontent.com/75617171/127715587-176c22d2-b67a-4074-9bfa-2b560b7ca631.png" width="200" height="200"><br/>
 > Fig 1.6 Normalized sliced greyscale Radiometric Image
 
