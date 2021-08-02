@@ -279,35 +279,30 @@ After the main call is directed by the solarai app to api services app, the URL 
 where “id” received when image was sent through POST/api/v1/defect_detection is required as a parameter for this API call. 
 The get result function requests celery for state of a task by passing task id as parameter to AsyncResult method and compares the state with the given three states: success, pending, failure and sends a JSON response respectively.<br/>
 The JSON response will be of 3 types: <br/>
-                                1. Success: If state of task is successful it returns a JSON response of job status as <br/>
-                                                  “SUCCESS“ and the output location of outputs.
-                                2. Pending: When the state of task is unknown or in progress it sends a JSON response 
-                                                  of job status as “PENDING”.
-                                3. Failure: If the status of task is failed or none of the above it sends a JSON response 
-                                                  of job status as “FAILURE”.
+                                1. Success: If state of task is successful it returns a JSON response of job status as “SUCCESS“ and the output location of outputs.<br/>
+                                2. Pending: When the state of task is unknown or in progress it sends a JSON response of job status as “PENDING”.<br/>
+                                3. Failure: If the status of task is failed or none of the above it sends a JSON response of job status as “FAILURE”.<br/>
 
 #### Defect Correction (Remaining)
 This API will give the output with Orthomosaic ID or Orthomosaic Name, Table ID, Defects Details and Lat-Long Coordinates.
-After the main call is directed by the solarai app to api services app, the URL “v1/defect_correction“ calls the function views.defect_correction , which requests for parameters. 
+After the main call is directed by the solarai app to api services app, the URL “v1/defect_correction“ calls the function views.defect_correction , which requests for parameters. <br/>
 It requires file location of corrected XML files in file_location and the output path is set in which the response will be received.
 
 #### Table Detection 
-This API is used for Table Detection.
-After the main call is directed by the solarai app to api services app, the URL “v1/defect_detection“ calls the function views.detection , which requests for parameters.
-where parameters required are:
-In a directory three image files should be there with the given naming convention (Ref. 3(a), 3(b) and 3(c)) and path of the directory should be passed in image_path. Example : image_path=/home/ubuntu/solaraidata/
-panel_orientaion = PORTRAIT / LANDSCAPE (Ref. 3(d))
-no_of_columns = 10 (Ref. Fig 1.5)
-no_of_rows = 4 (Ref. Fig 1.5)
-All the inputs are send to a function imported from tasks.py named “detection” which performs operations of rotation and slice on the orthomosaic where the rotation and slice functions are imported from rotate orthomosaic.py and slice orthomosaic.py respectively, then loads the appropriate weights of model on the type of image given, then writes the output in the output directory (where can one find the output directory) and returns “Task completed” on the completion of task to the detection function of views.py which then writes the status of the task and updates it in the celery (imported as app) with the respected task id. Celery is an asynchronous task queue which stores the tasks id and the status of task. Then detection function of views.py return a JSON response.
-The JSON response received after sending the POST request contains: 
-   i. An “id” will be provided which will be used for further API calls.
-   ii. ”get_detection” shows the status of the POST call made. The response can be : 
-                1. Success: If the Task was successful the state of task is set as “SUCCESS” .
-                2. Pending: When the state of task is unknown or in progress it sets status of task as 
-                                   “PENDING”.
-                3. Failure: If the status of task is failed or none of the above it sets status of task as 
-                                   “FAILURE”.
-   iii. ”db_upload_status” response can be either True or False.
-                1. True: The upload in database was successful.
-                2. False: The upload in database was not successful.
+This API is used for Table Detection.<br/>
+After the main call is directed by the solarai app to api services app, the URL “v1/table_detection“ calls the function views.detection , which requests for parameters.
+where parameters required are:<br/>
+-In a directory three image files should be there with the given naming convention (Ref. 3(a), 3(b) and 3(c)) and path of the directory should be passed in image_path. Example : image_path=/home/ubuntu/solaraidata/<br/>
+-panel_orientaion = PORTRAIT / LANDSCAPE (Ref. 3(d))<br/>
+-no_of_columns = 10 (Ref. Fig 1.5)<br/>
+-no_of_rows = 4 (Ref. Fig 1.5)<br/>
+All the inputs are send to a function imported from tasks.py named “detection” which performs operations of rotation and slice on the orthomosaic where the rotation and slice functions are imported from rotate orthomosaic.py and slice orthomosaic.py respectively, then loads the appropriate weights of model on the type of image given, then writes the output in the output directory (where can one find the output directory) and returns “Task completed” on the completion of task to the detection function of views.py which then writes the status of the task and updates it in the celery (imported as app) with the respected task id. Celery is an asynchronous task queue which stores the tasks id and the status of task. Then detection function of views.py return a JSON response.<br/>
+The JSON response received after sending the POST request contains: <br/>
+   1. An “id” will be provided which will be used for further API calls.<br/>
+   2. ”table_detection” shows the status of the POST call made. The response can be : <br/>
+      - Success: Conveys that data has been received by get_detection API .<br/>
+      - Pending: Conveys that the process is in progress.<br/>
+      - Failure: Conveys that the request got failed due to some error.<br/>
+   3. ”db_upload_status” response can be either True or False.<br/>
+      - True: The upload in database was successful.<br/>
+      - False: The upload in database was not successful.
