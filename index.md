@@ -292,12 +292,12 @@ It requires file location of corrected XML files in file_location and the output
 This API is used for Table Detection.<br/>
 After the main call is directed by the solarai app to api services app, the URL “v1/table_detection“ calls the function views.detection , which requests for parameters.
 where parameters required are:<br/>
--In a directory three image files should be there with the given naming convention (Ref. 3(a), 3(b) and 3(c)) and path of the directory should be passed in image_path. Example : image_path=/home/ubuntu/solaraidata/<br/>
--panel_orientaion = PORTRAIT / LANDSCAPE (Ref. 3(d))<br/>
--no_of_columns = 10 (Ref. Fig 1.5)<br/>
--no_of_rows = 4 (Ref. Fig 1.5)<br/>
+- In a directory three image files should be there with the given naming convention (Ref. 3(a), 3(b) and 3(c)) and path of the directory should be passed in image_path. Example : image_path=/home/ubuntu/solaraidata/<br/>
+- panel_orientaion = PORTRAIT / LANDSCAPE (Ref. 3(d))<br/>
+- no_of_columns = 10 (Ref. Fig 1.5)<br/>
+- no_of_rows = 4 (Ref. Fig 1.5)<br/>
 All the inputs are send to a function imported from tasks.py named “detection” which performs operations of rotation and slice on the orthomosaic where the rotation and slice functions are imported from rotate orthomosaic.py and slice orthomosaic.py respectively, then loads the appropriate weights of model on the type of image given, then writes the output in the output directory (where can one find the output directory) and returns “Task completed” on the completion of task to the detection function of views.py which then writes the status of the task and updates it in the celery (imported as app) with the respected task id. Celery is an asynchronous task queue which stores the tasks id and the status of task. Then detection function of views.py return a JSON response.<br/>
-The JSON response received after sending the POST request contains: <br/>
+The JSON response received after sending the POST request contains:
    1. An “id” will be provided which will be used for further API calls.<br/>
    2. ”table_detection” shows the status of the POST call made. The response can be : <br/>
       - Success: Conveys that data has been received by get_detection API .<br/>
