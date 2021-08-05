@@ -256,7 +256,7 @@ An API (Application Programming Interface) is a set of functions that allows app
 - *Develop*: Through this tab, a user can add the endpoint to the mock server, create and publish documentation for the API. Additionally, the user can also play with the environment to switch between different setups without changing the request.
 -  *Test*: The test tab provides a variety of testing options for the tester to develop a spotless and great API. It includes creating a new test suite to test the API behavior, performing integration testing on the API to check if the API works well with the third-party applications or not. Additionally, contract tests to make sure that the API works according to its specifications.
 -  *Observe*: Monitor the performance of the API under various conditions and intervals with the help of Postman Monitors.
-The response body is requested in JSON format.
+The response body is requested in JSON format.<br/>
 The four API’s developed using postman are : 
 
 #### Defect Detection 
@@ -296,7 +296,7 @@ It requires file location of corrected XML files in file_location and the output
 
 #### Table Detection 
 This API is used for Table Detection.<br/>
-After the main call is directed by the solarai app to api services app, the URL “v1/table_detection“ calls the function views.detection , which requests for parameters.
+After the main call is directed by the solarai app to api services app, the URL “v1/table_detection“ calls the function views.table_detection, which requests for parameters.
 where parameters required are:<br/>
 - In a directory three image files should be there with the given naming convention (Ref. 3(a), 3(b) and 3(c)) and path of the directory should be passed in image_path. Example : image_path=/home/ubuntu/solaraidata/<br/>
 - panel_orientaion = PORTRAIT / LANDSCAPE (Ref. 3(d))<br/>
