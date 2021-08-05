@@ -66,10 +66,10 @@ As shown below in Fig 1.4 (a) Is a Portrait Panel with rotation and without rota
 > Fig 1.4 (b) Landscape Panel with rotation and without rotation
 
 ## No of columns in a table
-There are many tables in solar plant. So number of columns of a single table is to be provided. As shown in Fig 1.5 No of columns in this image is 10. The input is to be given as “no_of_columns_per_table = 10“.
+There are many tables in solar plant. So number of columns of a single table is to be provided. As shown in Fig 1.5 No of columns in this image is 10. The input is to be given as ``no_of_columns_per_table = 10``.
 
 ## No of rows in a table
-Number of rows of a single table is to be provided. As shown in Fig 1.5 No of rows in this image is 4. The input is to be given as “no_of_rows_per_table = 4“.
+Number of rows of a single table is to be provided. As shown in Fig 1.5 No of rows in this image is 4. The input is to be given as ``no_of_rows_per_table = 4``.
 
 <img src="https://user-images.githubusercontent.com/75617171/127714053-2cec3b3c-3ea7-4cb7-92a4-ba348a400a46.png" width="300" height="400"><br/>
 > Fig 1.5 No of columns and rows per table
@@ -251,8 +251,13 @@ To create SO files follow the instructions given in How to use Yolo as DLL and S
 The input files or images can be saved in a directory created here or there and can be fixed for later use. The path of directory is sent as input for image path or file location when calling the api for defect detection, table detection and defect correction respectively. API is a software intermediary that allows two applications to talk to each other. The “api/” in the URL directs the api to api services app via main app solarai urls.py which further instructs the api for all calls made with “api/” to be directed to the urls.py of api services app. The api services app has path set for all the API’s to it’s function stored in views.py file.
 
 ## API’s
-An API (Application Programming Interface) is a set of functions that allows applications to access data and interact with external software components, operating systems, or microservices. An API delivers a user response to a system and sends the system's response back to a user.
-The four API’s are : 
+An API (Application Programming Interface) is a set of functions that allows applications to access data and interact with external software components, operating systems, or microservices. An API delivers a user response to a system and sends the system's response back to a user. Postman is an API development tool which helps to build, test and modify APIs. It has the ability to make various types of HTTP requests(GET, POST, PUT, PATCH), saving environments for later use, converting the API to code for various languages(like JavaScript, Python). The four primary tabs are the stepwise process for developing a complete API : 
+- *Define*: The first tab creates the schema of the API. In addition to that, the user can also import schema from somewhere else to work on it by themselves.
+- *Develop*: Through this tab, a user can add the endpoint to the mock server, create and publish documentation for the API. Additionally, the user can also play with the environment to switch between different setups without changing the request.
+-  *Test*: The test tab provides a variety of testing options for the tester to develop a spotless and great API. It includes creating a new test suite to test the API behavior, performing integration testing on the API to check if the API works well with the third-party applications or not. Additionally, contract tests to make sure that the API works according to its specifications.
+-  *Observe*: Monitor the performance of the API under various conditions and intervals with the help of Postman Monitors.
+The response body is requested in JSON format.
+The four API’s developed using postman are : 
 
 #### Defect Detection 
 This API is used to detect the defects from Orthomosaic images.
