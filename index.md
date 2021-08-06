@@ -289,10 +289,11 @@ The JSON response will be of 3 types: <br/>
                                 2. Pending: When the state of task is unknown or in progress it sends a JSON response of job status as “PENDING”.<br/>
                                 3. Failure: If the status of task is failed or none of the above it sends a JSON response of job status as “FAILURE”.<br/>
 
-#### Defect Correction (Remaining)
-This API will give the output with Orthomosaic ID or Orthomosaic Name, Table ID, Defects Details and Lat-Long Coordinates.
-After the main call is directed by the solarai app to api services app, the URL “v1/defect_correction“ calls the function views.defect_correction , which requests for parameters. <br/>
-It requires file location of corrected XML files in file_location and the output path is set in which the response will be received.
+#### Defect Mapping
+This API will give the output with Orthomosaic ID or Orthomosaic Name, Table ID, Defects Details and Lat-Long Coordinates.<br/>
+After the main call is directed by the solarai app to api services app, the URL “v1/defect_mapping“ calls the function views.defect_mapping, which requests for parameters. <br/>
+It requires file location of corrected XML files in file_location and it reads the data and loads it in json format and calls tasks.defect_mapping which further sorts the table and calls mapping_defect_table from the preprocessing.py file which then maps the defects found in plant with tables. It send a response in which it syncs the task state with success pending or failure. The output path is set in which the file response will be received of the mapped defect if task was successful.
+
 
 #### Table Detection 
 This API is used for Table Detection.<br/>
