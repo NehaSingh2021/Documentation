@@ -23,39 +23,39 @@
     - [Validating the model for defects detection](#validating-the-model-for-defects-detection)
     - [Training the model for detection of tables](#training-the-model-for-detection-of-tables)
     - [Validating the model for table detection](#validating-the-model-for-table-detection)
-    - [Masking and Contouring (To be used elsewhere)](#masking-and-contouring-to-be-used-elsewhere)
-    - [Mapping (To be used elsewhere)](#mapping-to-be-used-elsewhere)
+    - [Masking and Contouring](#masking-and-contouring)
+    - [Mapping](#mapping)
 6. [Deployment of the model](#deployment-of-the-model)
     - [Creating SO files](#creating-so-files)
     - [Input Path](#input-path)
     - [API’s](#apis)<br/>
           i [Defect Detection](#defect-detection)<br/>
           ii [Get Result](#get-result)<br/>
-          iii [Defect Correction (Remaining)](#defect-correction-remaining)<br/>
+          iii [Defect Mapping](#defect-mapping)<br/>
           iv [Table Detection](#table-detection)
 
 
 # Input
 ## Radiometric Orthomosaic
-Radiometric orthomosaic image is made by stitching raw thermal images captured by flying drone over solar plant. It contains temperature data. As shown below in Fig 1.1 it is a sliced normalized grey scale radiometric image. The name of this input image should be in the instructed format inside the directory that is “plantname_mission_radiometric.tif”.
+Radiometric orthomosaic image is made by stitching raw thermal images captured by flying drone over solar plant. It contains temperature data. As shown below in Fig 1.1 it is a sliced normalized grey scale radiometric image. The name of this input image should be in the instructed format inside the directory that is ``plantname_mission_radiometric.tif``.
 
 <img src="https://user-images.githubusercontent.com/75617171/127639002-306c5ce7-73e4-4520-85f6-d2f2fa9e969b.png" width="300" height="300"><br/>
 > Fig 1.1 Normalized sliced grey scale Radiometric Image
 
 ## Inferno Orthomosaic
-Inferno orthomosaic image is created by radiometric image by pouring Inferno color scheme in it as shown in Fig 1.2. The name of this input image should be in the instructed format inside the directory that is “plantname_mission_inferno.tif”.
+Inferno orthomosaic image is created by radiometric image by pouring Inferno color scheme in it as shown in Fig 1.2. The name of this input image should be in the instructed format inside the directory that is ``plantname_mission_inferno.tif``.
 
 <img src="https://user-images.githubusercontent.com/75617171/127693062-76afd971-7d54-4d47-950c-ccc6efed7446.png" width="300" height="300"><br/>
 > Fig 1.2 Inferno orthomosaic image
 
 ## RGB Orthomosaic
-RGB orthomosaic image is a normal image which contains three channels of color red, blue and green made by stitching raw images captured by flying drone over solar plant as shown in Fig 1.3. The name of this input image should be in the instructed format inside the directory that is “plantname_mission_rgb.tif”.
+RGB orthomosaic image is a normal image which contains three channels of color red, blue and green made by stitching raw images captured by flying drone over solar plant as shown in Fig 1.3. The name of this input image should be in the instructed format inside the directory that is ``plantname_mission_rgb.tif``.
 
 <img src="https://user-images.githubusercontent.com/75617171/127713046-cc48e1b3-e7a9-4ff2-98a8-b662ced9ecb6.png" width="300" height="300"><br/>
 > Fig 1.3 RGB orthomosaic image
 
 ## Panel orientation
-The orientation of the panel with respect to tables is either portrait or landscape. The input contains two values either portrait or landscape. If the height of table is less than width then it is landscape and if height of the table is greater than it’s width then it is portrait. The input is to be given as “panel_orientation” = PORTRAIT” or “panel_orientation” = LANDSCAPE”. 
+The orientation of the panel with respect to tables is either portrait or landscape. The input contains two values either portrait or landscape. If the height of table is less than width then it is landscape and if height of the table is greater than it’s width then it is portrait. The input is to be given as ``panel_orientation = PORTRAIT or  LANDSCAPE``. 
 NOTE: The input name of portrait of landscape needs to be in all caps format.
 As shown below in Fig 1.4 (a) Is a Portrait Panel with rotation and without rotation respectively. Fig 1.4 (b) Is a Landscape Panel with rotation and without rotation respectively.
 
@@ -80,7 +80,7 @@ Number of rows of a single table is to be provided. As shown in Fig 1.5 No of ro
 Scaling the radiometric image in grey color with the minimum and maximum values as the temperature difference in the solar plant. If in a plant if a temperature is of 30-50 degree then the entire image will be scaled for 20 degree of temperature difference. 30 degree will be considered as 0 pixel values and 50 degree will be considered as 255 pixel values.
 Normalization allows better correspondence between temperature values irrespective of location. (Higher temp locations may have temperatures from 35-45 degrees, lower temp locations may vary from 20-30 degrees) so by this process the data is preprocessed to be independent and identically distributed. The data contains many outliers, which tend to diminish the quality of the grayscale, so the outliers are clipped. For normalization of radiometric orthomosaic the input required is the Radiometric geotiff image path.
 Assumptions: Minimum temperature of any plant is considered to be above -50 degrees Celsius.<br/>
-The GitHub link to source code: <a href="" target="_blank">GitHub Normalization.py file </a>???????????????????
+The GitHub link to source code: <a href="https://github.com/baggageai/dml-prescinto-solar-ai/blob/AB%23242-code-integration-and-traverse-through-directory/solarai/pre_processor/Radiometric2Gray.py" target="_blank">GitHub Radiometric2Gray.py file </a>
 
 <img src="https://user-images.githubusercontent.com/75617171/127715587-176c22d2-b67a-4074-9bfa-2b560b7ca631.png" width="300" height="300"><br/>
 > Fig 1.6 Normalized sliced greyscale Radiometric Image
@@ -104,7 +104,7 @@ The slicing requires input_dir, output_dir, panel_orientation, tables, tables_pe
 The GitHub link to the source code: <a href="https://github.com/baggageai/dml-prescinto-solar-ai/blob/main/solarai/pre_processor/slice_orthomosaic.py" target="_blank">GitHub Slice_orthomosaic.py file </a>
 
 ## Annotation (required for training and QA)
-All the defects are annotated through an annotation tool CVAT. It is an OpenCV project to provide easy labeling for computer vision datasets. CVAT allows to utilize an easy to use interface to make annotations efficiently. This tool generates an xml file for each image. As shown in Fig 1.9 each type of defect is annotated with table annotation.<br/>
+All the defects are annotated through an annotation tool <a href="https://github.com/openvinotoolkit/cvat" target="_blank">CVAT</a>. It is an OpenCV project to provide easy labeling for computer vision datasets. CVAT allows to utilize an easy to use interface to make annotations efficiently. This tool generates an xml file for each image. As shown in Fig 1.9 each type of defect is annotated with table annotation.<br/>
 The GitHub link to the source code: <a href="https://github.com/baggageai/dml-prescinto-solar-ai/blob/main/solarai/pre_processor/create_bbox_rotate_xml.py" target="_blank"> Annotation GitHub file </a>
 
 <img src="https://user-images.githubusercontent.com/75617171/127717872-e9125712-1ee2-4e8d-9318-b7d565335c7d.png" width="800" height="400"><br/>
@@ -198,12 +198,12 @@ Model is trained for tables and each defect separately. After annotations all th
 >Fig 1.21 Model Training Flow Chart
 
 ## Training the model for detection of defects
-For each defect the model was trained separately. The dataset annotated in previous steps is split into train and test data such that 80% data is used for training and with 20% data testing is done where, an entire orthomosaic file is used for training and entire another orthomosaic file is used for testing. If 5 orthomosaic files are shared then 3 of them are used for training and 2 for testing. Darknet<a href="" target="_blank"></a> is used for training and testing which is a framework for object detection classifier. Then anchor boxes for each of the defect is calculated. Refer the GitHub link <a href="" target="_blank"></a> to calculate anchor box which is instructed in readme file to calculate anchors:<br/>
+For each defect the model was trained separately. The dataset annotated in previous steps is split into train and test data such that 80% data is used for training and with 20% data testing is done where, an entire orthomosaic file is used for training and entire another orthomosaic file is used for testing. If 5 orthomosaic files are shared then 3 of them are used for training and 2 for testing. <a href="https://github.com/AlexeyAB/darknet" target="_blank">Darknet</a> is used for training and testing which is a framework for object detection classifier. Then anchor boxes for each of the defect is calculated. Refer the <a href="https://github.com/AlexeyAB/darknet#how-to-use-on-the-command-line" target="_blank">GitHub link</a> to calculate anchor box which is instructed in readme file to calculate anchors:<br/>
 ```darknet.exe detector calc_anchors data/obj.data -num_of_clusters 12 -width 640 -height 640 ```<br/>
 After calculating anchor boxes image processing techniques mention in the preprocessing (Augmentation) are applied. The model is then trained to obtain mish YOLOv4 P4 (640 X 640).
 
 ## Validating the model for defects detection
-For each training the train weights at every 1000 iterations is saved. Once all the weights are received mAP is calculated of each weight on test data. GitHub Link for reference of mAP calculation Then graph of mAP is drawn to find the perfect fit and optimum weight. Below is the graph of mAP (Image of mAP graph). Roc curve is calculated to find the optimum threshold.
+For each training the train weights at every 1000 iterations is saved. Once all the weights are received mAP is calculated of each weight on test data. *GitHub Link* for reference of mAP calculation Then graph of mAP is drawn to find the perfect fit and optimum weight. Below is the graph of mAP *(Image of mAP graph)*. Roc curve is calculated to find the optimum threshold.  ???????????????????????????????????????????????????????????????????????????????????????????????????????????????????/
 
 ## Training the model for detection of tables
 Same steps (5(a)) are followed for model training of detection of tables as for model training of detection of defects.
@@ -211,13 +211,13 @@ Same steps (5(a)) are followed for model training of detection of tables as for 
 ## Validating the model for table detection
 Same steps (5(b)) are followed for validation of tables detection as for validation of defects detection.
 
-## Masking and Contouring (To be used elsewhere)
+## Masking and Contouring
 The tables are present in many different size in a plant which is mapped using contouring. Image is converted into a black and white image which gives the total length of all table in a line which is mapped using the width of a single panel x number of columns which gives length of one table. All the tables are then traced and boundary of rectangular boxes is drawn around each table which is then sorted and mapped with the defects.<br/>
-The GitHub link to the source code: (file link )
+The GitHub link to the source code: (file link ) ????????????????????????????????????????????????????????????
 
-## Mapping (To be used elsewhere)
+## Mapping
 Mapping of every defect with the corresponding tables. This is done by calculating minimum distance between the centroid (latitude and longitude) of table and defect.<br/>
-The GitHub link to the source code: (file link)
+The GitHub link to the source code: (file link) ????????????????????????????????????????????????????????????????
 
 # Deployment of the model 
 For first time activity the deployment process given in Fig 1.22 is followed for each plant.
