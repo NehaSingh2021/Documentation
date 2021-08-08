@@ -203,7 +203,7 @@ For each defect the model was trained separately. The dataset annotated in previ
 After calculating anchor boxes image processing techniques mention in the preprocessing (Augmentation) are applied. The model is then trained to obtain mish YOLOv4 P4 (640 X 640).
 
 ## Validating the model for defects detection
-For each training the train weights at every 1000 iterations is saved. Once all the weights are received mAP is calculated of each weight on test data. *GitHub Link* for reference of mAP calculation Then graph of mAP is drawn to find the perfect fit and optimum weight. Below is the graph of mAP *(Image of mAP graph)*. Roc curve is calculated to find the optimum threshold.  ???????????????????????????????????????????????????????????????????????????????????????????????????????????????????/
+For each training the train weights at every 1000 iterations is saved. Once all the weights are received mAP is calculated of each weight on test data. <a href="https://github.com/AlexeyAB/darknet" target="_blank">GitHub Link</a> for reference of mAP calculation Then graph of mAP is drawn to find the perfect fit and optimum weight. Below is the graph of mAP *(Image of mAP graph)*. Roc curve is calculated to find the optimum threshold.  ???????????????????????????????????????????????????????????????????????????????????????????????????????????????????/
 
 ## Training the model for detection of tables
 Same steps (5(a)) are followed for model training of detection of tables as for model training of detection of defects.
@@ -233,7 +233,7 @@ Deployment process for defect detection for each plant is given in Fig 1.23.
 Deployment process for defect detection for each plant is given in Fig 1.23.
 
 ## Creating SO files 
-To create SO files follow the instructions given in How to use Yolo as DLL and SO Libraries.
+To create SO files follow the instructions given in <a href="https://github.com/AlexeyAB/darknet#how-to-use-yolo-as-dll-and-so-libraries" target="_blank">How to use Yolo as DLL and SO Libraries</a>.
 ```
 -On Linux
 -using build.sh or
@@ -248,7 +248,7 @@ To create SO files follow the instructions given in How to use Yolo as DLL and S
 ```
 
 ## Input Path
-The input files or images can be saved in a directory created here or there and can be fixed for later use. The path of directory is sent as input for image path or file location when calling the api for defect detection, table detection and defect correction respectively. API is a software intermediary that allows two applications to talk to each other. The “api/” in the URL directs the api to api services app via main app solarai urls.py which further instructs the api for all calls made with “api/” to be directed to the urls.py of api services app. The api services app has path set for all the API’s to it’s function stored in views.py file.
+The input files or images can be saved in a directory created here or there and can be fixed for later use. The path of directory is sent as input for image path or file location when calling the api for defect detection, table detection and defect correction respectively. API is a software intermediary that allows two applications to talk to each other. The “api/” in the URL directs the api to api services app via main app solarai <a href="https://github.com/baggageai/dml-prescinto-solar-ai/blob/main/backend/solarai/solarai/urls.py" target="_blank">urls.py</a> which further instructs the api for all calls made with “api/” to be directed to the <a href="https://github.com/baggageai/dml-prescinto-solar-ai/blob/main/backend/solarai/api_services/urls.py" target="_blank">urls.py </a>of api services app. The api services app has path set for all the API’s to it’s function stored in <a href="https://github.com/baggageai/dml-prescinto-solar-ai/blob/main/backend/solarai/api_services/views.py" target="_blank">views.py</a> file.
 
 ## API’s
 An API (Application Programming Interface) is a set of functions that allows applications to access data and interact with external software components, operating systems, or microservices. An API delivers a user response to a system and sends the system's response back to a user. Postman is an API development tool which helps to build, test and modify APIs. It has the ability to make various types of HTTP requests(GET, POST, PUT, PATCH), saving environments for later use, converting the API to code for various languages(like JavaScript, Python). The four primary tabs are the stepwise process for developing a complete API : 
@@ -268,7 +268,7 @@ where parameters required are:<br/>
 - no_of_columns = 10 (Ref. Fig 1.5)
 - no_of_rows = 4 (Ref. Fig 1.5)
 
-All the inputs are send to a function imported from tasks.py named “detection” which performs operations of rotation and slice on the orthomosaic where the rotation and slice functions are imported from rotate orthomosaic.py and slice orthomosaic.py respectively, then loads the appropriate weights of model on the type of image given, then writes the output in the output directory (where can one find the output directory) and returns “Task completed” on the completion of task to the detection function of views.py which then writes the status of the task and updates it in the celery (imported as app) with the respected task id. Celery is an asynchronous task queue which stores the tasks id and the status of task. Then detection function of views.py return a JSON response.<br/>
+All the inputs are send to a function imported from <a href="https://github.com/baggageai/dml-prescinto-solar-ai/blob/main/backend/solarai/api_services/tasks.py" target="_blank">tasks.py</a> named “detection” which performs operations of rotation and slice on the orthomosaic where the rotation and slice functions are imported from rotate orthomosaic.py and slice orthomosaic.py respectively, then loads the appropriate weights of model on the type of image given, then writes the output in the output directory (where can one find the output directory) and returns “Task completed” on the completion of task to the detection function of views.py which then writes the status of the task and updates it in the <a href="https://github.com/baggageai/dml-prescinto-solar-ai/blob/main/backend/solarai/solarai/celery.py" target="_blank">celery</a> (imported as app) with the respected task id. Celery is an asynchronous task queue which stores the tasks id and the status of task. Then detection function of views.py return a JSON response.<br/>
 The JSON response received after sending the POST request contains: <br/>
    1. An “id” will be provided which will be used for further API calls.<br/>
    2. ”get_detection” shows the status of the POST call made. The response can be : <br/>
