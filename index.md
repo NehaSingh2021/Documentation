@@ -33,7 +33,7 @@
           ii [Get Result](#get-result)<br/>
           iii [Defect Mapping](#defect-mapping)<br/>
           iv [Table Detection](#table-detection)
-
+7. [Database](#database)
 
 # Input
 ## Radiometric Orthomosaic
@@ -314,3 +314,5 @@ The JSON response received after sending the POST request contains:
    3. ”db_upload_status” response can be either True or False.<br/>
       - True: The upload in database was successful.<br/>
       - False: The upload in database was not successful.
+
+## Database
