@@ -316,3 +316,49 @@ The JSON response received after sending the POST request contains:
       - False: The upload in database was not successful.
 
 ## Database
+Databases store very large numbers of records efficiently. All the data and records are stored in SQL server hosted on azure. SQL is a language used to fetch, add or manipulate data in databases. There are three database tables used: plant_master, table_master and defects.
+
+
+plant_master (plant_id varchar(30),
+                         ortho_name varchar(30),
+                         inspection_id varchar(30) DEFAULT NULL,
+                          ortho_size float DEFAULT NULL,
+                          rotation_info nvarchar(max) DEFAULT NULL,
+                          pannel_oriantation varchar(20),
+                          no_of_rows int,
+                          no_of_columns int,
+                          date_time datetime DEFAULT(getdate()));
+                          
+table_master(plant_id varchar(30),
+                     ortho_id varchar(30),
+                     inspection_id varchar(30) DEFAULT NULL,
+                      plant_name varchar(30),
+                     table_id varchar(30),
+                     rotated_table_cor nvarchar(max),
+                     table_cor nvarchar(max),
+                     table_lat_gps float,
+                     table_long_gps float,
+                     rotated_panel_cor nvarchar(max),
+                     panel_cor nvarchar(max),
+                     panel_centroid_cor nvarchar(max),
+                     panel_id varchar(20),
+                     panel_lat_gps float,
+                     panel_long_gps float,
+                     string_id varchar(30)  DEFAULT NULL,
+                     string_cor nvarchar(max) DEFAULT NULL,
+                     date_time datetime DEFAULT(getdate()));     
+                  
+defects(ortho_id varchar(30),
+                   defects_name varchar(30),
+                   inspection_id varchar(30) DEFAULT NULL,
+                   rotated_ortho_cor nvarchar(max),
+                   ortho_cor nvarchar(max),
+                   lat float,
+                   long float,
+                   panel_id varchar(30),
+                   plant_name varchar(30),
+                   table_id varchar(30),
+                   min_temp float,
+                   max_temp float,
+                   median_temp float,
+                   date_time datetime DEFAULT(getdate()));                  
