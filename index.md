@@ -321,45 +321,49 @@ Databases store very large numbers of records efficiently. All the data and reco
 - Table 1: plant_master <br/>
   It has nine fields:<br/>
   - plant_id varchar(30)<br/>
-  - ortho_name varchar(30),<br/>
-                         inspection_id varchar(30) DEFAULT NULL,<br/>
-                          ortho_size float DEFAULT NULL,<br/>
-                          rotation_info nvarchar(max) DEFAULT NULL,<br/>
-                          pannel_oriantation varchar(20),<br/>
-                          no_of_rows int,<br/>
-                          no_of_columns int,<br/>
-                          date_time datetime DEFAULT(getdate()));<br/>
+  - ortho_name varchar(30)<br/>
+  - inspection_id varchar(30) DEFAULT NULL<br/>
+  - ortho_size float DEFAULT NULL<br/>
+  - rotation_info nvarchar(max) DEFAULT NULL<br/>
+  - pannel_oriantation varchar(20)<br/>
+  - no_of_rows int<br/>
+  - no_of_columns int<br/>
+  - date_time datetime DEFAULT(getdate())<br/>
                           
-table_master(plant_id varchar(30),
-                     ortho_id varchar(30),
-                     inspection_id varchar(30) DEFAULT NULL,
-                      plant_name varchar(30),
-                     table_id varchar(30),
-                     rotated_table_cor nvarchar(max),
-                     table_cor nvarchar(max),
-                     table_lat_gps float,
-                     table_long_gps float,
-                     rotated_panel_cor nvarchar(max),
-                     panel_cor nvarchar(max),
-                     panel_centroid_cor nvarchar(max),
-                     panel_id varchar(20),
-                     panel_lat_gps float,
-                     panel_long_gps float,
-                     string_id varchar(30)  DEFAULT NULL,
-                     string_cor nvarchar(max) DEFAULT NULL,
-                     date_time datetime DEFAULT(getdate()));     
+- Table 2: table_master<br/>
+  It has 18 fields:<br/>
+  - plant_id varchar(30)<br/>
+  - ortho_id varchar(30)<br/>
+  - inspection_id varchar(30) DEFAULT NULL<br/>
+  - plant_name varchar(30)<br/>
+  - table_id varchar(30)<br/>
+  - rotated_table_cor nvarchar(max)<br/>
+  - table_cor nvarchar(max)<br/>
+  - table_lat_gps float<br/>
+  - table_long_gps float<br/>
+  - rotated_panel_cor nvarchar(max)<br/>
+  - panel_cor nvarchar(max)<br/>
+  - panel_centroid_cor nvarchar(max)<br/>
+  - panel_id varchar(20)<br/>
+  - panel_lat_gps float<br/>
+  - panel_long_gps float<br/>
+  - string_id varchar(30) DEFAULT NULL<br/>
+  - string_cor nvarchar(max) DEFAULT NULL<br/>
+  - date_time datetime DEFAULT(getdate())<br/>    
                   
-defects(ortho_id varchar(30),
-                   defects_name varchar(30),
-                   inspection_id varchar(30) DEFAULT NULL,
-                   rotated_ortho_cor nvarchar(max),
-                   ortho_cor nvarchar(max),
-                   lat float,
-                   long float,
-                   panel_id varchar(30),
-                   plant_name varchar(30),
-                   table_id varchar(30),
-                   min_temp float,
-                   max_temp float,
-                   median_temp float,
-                   date_time datetime DEFAULT(getdate()));                  
+- Table 3: defects<br/>
+  It has 14 fields: <br/>
+  - ortho_id varchar(30) <br/>
+  - defects_name varchar(30) <br/>
+  - inspection_id varchar(30) DEFAULT NULL <br/>
+  - rotated_ortho_cor nvarchar(max) <br/>
+  - ortho_cor nvarchar(max) <br/>
+  - lat float <br/>
+  - long float <br/>
+  - panel_id varchar(30) <br/>
+  - plant_name varchar(30) <br/>
+  - table_id varchar(30) <br/>
+  - min_temp float <br/>
+  - max_temp float <br/>
+  - median_temp float <br/>
+  - date_time datetime DEFAULT(getdate()) <br/>              
