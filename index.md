@@ -203,7 +203,7 @@ For each defect the model was trained separately. The dataset annotated in previ
 After calculating anchor boxes image processing techniques mention in the preprocessing (Augmentation) are applied. The model is then trained to obtain mish YOLOv4 P4 (640 X 640).
 
 ## Validating the model for defects detection
-For each training the train weights at every 1000 iterations is saved. Once all the weights are received mAP is calculated of each weight on test data. <a href="https://github.com/AlexeyAB/darknet" target="_blank">GitHub Link</a> for reference of mAP calculation Then graph of mAP is drawn to find the perfect fit and optimum weight. Below is the graph of mAP *(Image of mAP graph)*. Roc curve is calculated to find the optimum threshold.  ???????????????????????????????????????????????????????????????????????????????????????????????????????????????????/
+For each training the train weights at every 1000 iterations is saved. Once all the weights are received mAP is calculated of each weight on test data. <a href="https://github.com/AlexeyAB/darknet" target="_blank">GitHub Link</a> for reference of mAP calculation Then graph of mAP is drawn to find the perfect fit and optimum weight.  Roc curve is calculated to find the optimum threshold.  
 
 ## Training the model for detection of tables
 Same steps (5(a)) are followed for model training of detection of tables as for model training of detection of defects.
@@ -213,11 +213,10 @@ Same steps (5(b)) are followed for validation of tables detection as for validat
 
 ## Masking and Contouring
 The tables are present in many different size in a plant which is mapped using contouring. Image is converted into a black and white image which gives the total length of all table in a line which is mapped using the width of a single panel x number of columns which gives length of one table. All the tables are then traced and boundary of rectangular boxes is drawn around each table which is then sorted and mapped with the defects.<br/>
-The GitHub link to the source code: (file link ) ????????????????????????????????????????????????????????????
 
 ## Mapping
 Mapping of every defect with the corresponding tables. This is done by calculating minimum distance between the centroid (latitude and longitude) of table and defect.<br/>
-The GitHub link to the source code: (file link) ????????????????????????????????????????????????????????????????
+The GitHub link to the source code: <a href="https://github.com/baggageai/dml-prescinto-solar-ai/blob/AB%23201-Post-processing-to-correct-the-table-bounding-boxes/solarai/pre_processor/mapping_defect_table.py" target="_blank">Mapping_defect_table.py</a>
 
 # Deployment of the model 
 For first time activity the deployment process given in Fig 1.22 is followed for each plant.
