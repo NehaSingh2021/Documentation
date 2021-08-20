@@ -319,7 +319,6 @@ The JSON response received after sending the POST request contains:
 Databases store very large numbers of records efficiently. All the data and records are stored in SQL server hosted on azure. SQL is a language used to fetch, add or manipulate data in databases. There are three database tables used: plant_master, table_master and defects each used to store their respective generated data.
 
 - Table 1: plant_master <br/>
-  It has nine fields:<br/>
   - plant_id varchar(30)<br/>
   - ortho_name varchar(30)<br/>
   - inspection_id varchar(30) DEFAULT NULL<br/>
@@ -331,7 +330,6 @@ Databases store very large numbers of records efficiently. All the data and reco
   - date_time datetime DEFAULT(getdate())<br/>
                           
 - Table 2: table_master<br/>
-  It has 18 fields:<br/>
   - plant_id varchar(30)<br/>
   - ortho_id varchar(30)<br/>
   - inspection_id varchar(30) DEFAULT NULL<br/>
@@ -352,7 +350,6 @@ Databases store very large numbers of records efficiently. All the data and reco
   - date_time datetime DEFAULT(getdate())<br/>    
                   
 - Table 3: defects<br/>
-  It has 14 fields: <br/>
   - ortho_id varchar(30) <br/>
   - defects_name varchar(30) <br/>
   - inspection_id varchar(30) DEFAULT NULL <br/>
