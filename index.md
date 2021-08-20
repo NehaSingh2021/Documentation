@@ -316,18 +316,17 @@ The JSON response received after sending the POST request contains:
       - False: The upload in database was not successful.
 
 ## Database
-Databases store very large numbers of records efficiently. All the data and records are stored in SQL server hosted on azure. SQL is a language used to fetch, add or manipulate data in databases. There are three database tables used: plant_master, table_master and defects.
+Databases store very large numbers of records efficiently. All the data and records are stored in SQL server hosted on azure. SQL is a language used to fetch, add or manipulate data in databases. There are three database tables used: plant_master, table_master and defects each used to store their respective generated data.
 
-
-plant_master (plant_id varchar(30),
-                         ortho_name varchar(30),
-                         inspection_id varchar(30) DEFAULT NULL,
-                          ortho_size float DEFAULT NULL,
-                          rotation_info nvarchar(max) DEFAULT NULL,
-                          pannel_oriantation varchar(20),
-                          no_of_rows int,
-                          no_of_columns int,
-                          date_time datetime DEFAULT(getdate()));
+plant_master (plant_id varchar(30),<br/>
+                         ortho_name varchar(30),<br/>
+                         inspection_id varchar(30) DEFAULT NULL,<br/>
+                          ortho_size float DEFAULT NULL,<br/>
+                          rotation_info nvarchar(max) DEFAULT NULL,<br/>
+                          pannel_oriantation varchar(20),<br/>
+                          no_of_rows int,<br/>
+                          no_of_columns int,<br/>
+                          date_time datetime DEFAULT(getdate()));<br/>
                           
 table_master(plant_id varchar(30),
                      ortho_id varchar(30),
