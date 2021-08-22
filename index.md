@@ -248,7 +248,7 @@ To create SO files follow the instructions given in <a href="https://github.com/
 ```
 
 ## Directory structure
-<img src="https://user-images.githubusercontent.com/75617171/130359861-38326d01-e163-442c-8387-4e75f4f8add5.PNG" width="800" height="300"><br/>
+<img src="https://user-images.githubusercontent.com/75617171/130359861-38326d01-e163-442c-8387-4e75f4f8add5.PNG" width="634" height="580"><br/>
 >Fig 1.23 Directory structure model 
 
 ## Input Path
