@@ -27,6 +27,7 @@
     - [Mapping](#mapping)
 6. [Deployment of the model](#deployment-of-the-model)
     - [Creating SO files](#creating-so-files)
+    - [Directory structure](#directory-structure)
     - [Input Path](#input-path)
     - [API’s](#apis)<br/>
           i [Defect Detection](#defect-detection)<br/>
@@ -245,6 +246,10 @@ To create SO files follow the instructions given in <a href="https://github.com/
 -build darknet using cmake or
 -compile build\darknet\yolo_cpp_dll.sln solution or  build\darknet\yolo_cpp_dll_no_gpu.sln  solution.
 ```
+
+## Directory structure
+<img src="https://user-images.githubusercontent.com/75617171/127719177-50af8798-5747-402d-9d47-895b48762aec.png" width="800" height="300"><br/>
+>Fig 1.23 Directory structure model 
 
 ## Input Path
 The input files or images can be saved in a directory created here or there and can be fixed for later use. The path of directory is sent as input for image path or file location when calling the api for defect detection, table detection and defect correction respectively. API is a software intermediary that allows two applications to talk to each other. The “api/” in the URL directs the api to api services app via main app solarai <a href="https://github.com/baggageai/dml-prescinto-solar-ai/blob/main/backend/solarai/solarai/urls.py" target="_blank">urls.py</a> which further instructs the api for all calls made with “api/” to be directed to the <a href="https://github.com/baggageai/dml-prescinto-solar-ai/blob/main/backend/solarai/api_services/urls.py" target="_blank">urls.py </a>of api services app. The api services app has path set for all the API’s to it’s function stored in <a href="https://github.com/baggageai/dml-prescinto-solar-ai/blob/main/backend/solarai/api_services/views.py" target="_blank">views.py</a> file.
